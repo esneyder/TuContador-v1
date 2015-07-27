@@ -57,7 +57,25 @@
 				<div class="met_thumbnail_slider_1_big">
 					<div class="met_thumbnail_slider_1_images">
 
-						 
+					<?php 
+						include_once 'module/PrincipalSlider/GetSliderPrincipal.php';
+						$fVSlider= new GetSliderPrincipal();
+						$listSlider= $fVSlider->GetSlider();
+						foreach ($listSlider as $key => $fila) {
+							echo '
+							<div data-slider-format="big-1-a">
+							<img src="'.$fila['imagen'].'" />
+							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top">
+								<div class="met_thumbnail_slider_1_title met_bgcolor4">
+									'.$fila['titulo'].'
+									<a href="#" class="met_bgcolor met_color2 met_bgcolor_transition2"></a>
+								</div>
+								<div class="met_thumbnail_slider_1_subtitle met_bgcolor5_trans">'.$fila['subtitulo'].'</div>
+							</div>
+						</div>';
+						}
+
+					 ?>	 
 						<div data-slider-format="big-1-a">
 							<img src="http://www.frentecivicosomosmayoria.es/wp-content/uploads/2013/09/comp.jpg" />
 							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top">
@@ -99,15 +117,6 @@
 							</div>
 						</div> 
 					</div>
-				</div>
-				 <div class="met_thumbnail_slider_1_small">
-					<div class="met_thumbnail_slider_1_images">
-						<img src="http://us.cdn2.123rf.com/168nwm/awrangler/awrangler1202/awrangler120200051/12401640-mercado-de-los-gr-ficos-de-an-lisis-de-valores.jpg" data-slider-format="small-1-a" />
-						<img src="http://www.bolsillofinanzas.com/wp-content/uploads/2014/06/finanzas_basicas-100x100.jpg" data-slider-format="small-1-b" />
-						<img src="https://img.uexternado.co/_psg/gal/th/psg_gal_10x100.jpg" data-slider-format="small-1-c" />
-						<img src="http://thumbs.dreamstime.com/t/calculadora-y-libros-en-blanco-22462641.jpg" data-slider-format="small-1-d" />
-						 </div>
-					<a class="met_thumbnail_slider_1_next" href="#">&rsaquo;</a>
 				</div>
 				<div class="met_thumbnail_slider_1_overlay"></div>
 			</div>
