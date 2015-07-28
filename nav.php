@@ -24,7 +24,7 @@
 		</li>
 		 
 		 
-		 <li class="met_bgcolor_transition2"><a href="#">Blog</a></li>
+		 <li class="met_bgcolor_transition2"><a href="blog.php">Blog</a></li>
 		 <li class="met_bgcolor_transition2"><a href="#">Clientes</a></li>
 		 <li class="met_bgcolor_transition2"><a href="#">Noticias</a></li>
 		<li class="met_bgcolor_transition2"><a href="contact.php">Contactenos</a></li>

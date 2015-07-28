@@ -1,48 +1,64 @@
 <?php
 include_once '../../connection/dbconfig.php';
-?>
-<?php include_once '../../header-module.php'; ?>
 
-<div class="clearfix"></div>
-
-<div class="container">
-<a href="add-data.php" class="pure-button">
-<i class="fa fa-hdd-o"></i> &nbsp; Nuevo</a>
-</div>
-
-<div class="clearfix"></div><br />
-
-<div class="container">
-	 <table class='table table-bordered table-responsive'>
-     <tr>
-     <th>#</th>
-     <th>Nombres</th>
-     <th>Perfil</th> 
-     <th>E - mail</th>
-     <th>Password</th>
-     <th>Tipo</th>
-     <th>Región</th>
-     <th>Estado</th>
-     <th colspan="2" align="center">Acción</th>
-     </tr>
-     <?php
-
-		$query = "SELECT * FROM usuarios";       
-		$records_per_page=10;//CANTIDAD DE REGISTROS A MOSTRAR
-		$newquery = $crud->paging($query,$records_per_page);
-		$crud->dataview($newquery);
-	 ?>
-    <tr>
-        <td colspan="10" align="center">
- 			<div class="pagination-wrap">
-            <?php $crud->paginglink($query,$records_per_page); ?>
-        	</div>
-        </td>
-    </tr>
  
-</table>
-   
-       
+
+if(isset($_POST['btn-login']))
+{
+	 
+	$email = $_POST['txt_email'];
+	$upass = $_POST['txt_password'];
+		
+	if($crud->login($email,$upass))
+	{
+		$crud->redirect('home.php');
+	}
+	else
+	{
+		$error = "Datos incorrectos";
+	}	
+}
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Acirsas</title>
+<link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css" type="text/css"  />
+<link rel="stylesheet" href="style.css" type="text/css"  />
+</head>
+<body>
+<div class="container">
+    	<div class="form-container">
+        <form method="post">
+            <h2>Acceso</h2><hr />
+            <?php
+			if(isset($error))
+			{
+					 ?>
+                     <div class="alert alert-danger">
+                        <i class="glyphicon glyphicon-warning-sign"></i> &nbsp; <?php echo $error; ?> !
+                     </div>
+                     <?php
+			}
+			?>
+            <div class="form-group">
+            	<input type="text" class="form-control" name="txt_email" placeholder="Username or E mail ID" required />
+            </div>
+            <div class="form-group">
+            	<input type="password" class="form-control" name="txt_password" placeholder="Your Password" required />
+            </div>
+            <div class="clearfix"></div><hr />
+            <div class="form-group">
+            	<button type="submit" name="btn-login" class="btn btn-block btn-primary">
+                	<i class="glyphicon glyphicon-log-in"></i>&nbsp;Login
+                </button>
+            </div>
+            <br />
+             
+        </form>
+       </div>
 </div>
 
-<?php include_once '../../footer-module.php'; ?>
+</body>
+</html>

@@ -74,6 +74,21 @@
 					</div>
 				</div>
 
+				<!--zona de comentarios -->
+<div class="n">
+    <div id="fb-root" class="fb_reset">
+        <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+        </div>
+    </div>
+    <script src="http://connect.facebook.net/es_LA/all.js#appId=APP_ID&amp;xfbml=1" type="text/javascript">
+</script><script type="text/javascript" language="javascript">
+//<![CDATA[
+        document.write("<fb:comments href='http://pedidosgratis.com.nu/' num_posts='100' width='700'><\/fb:comments>");
+        //]]> 
+    </script>
+</div>
+<!--zona de comentarios-->
+
 				<div class="row-fluid">
 					<div class="span12">
 						<span class="met_blog_comments_title met_color2 met_bgcolor">COMENTARIOS</span>

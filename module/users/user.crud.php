@@ -1,5 +1,5 @@
 <?php
-
+session_start();                  
 class crud
 {
 	private $db;
@@ -8,14 +8,64 @@ class crud
 	{
 		$this->db = $DB_con;
 	}
-	public function encriptar($cadena){
+
+    public function login($email,$password)
+    {
+       try
+       {
+          $stmt = $this->db->prepare("SELECT * FROM usuarios");
+          $stmt->execute(array(':email'=>$email, ':password'=>$password));
+          $userRow=$stmt->fetch(PDO::FETCH_ASSOC);
+          if($stmt->rowCount() > 0)
+          {
+             if($email==$userRow['email'] )
+             {
+             	
+                $_SESSION['email'] = "esneyder";
+                return true;
+             }
+             else
+             {
+                return false;
+             }
+          }
+       }
+       catch(PDOException $e)
+       {
+           echo $e->getMessage();
+       }
+   }
+ 
+   public function is_loggedin()
+   {
+      if(isset($_SESSION['email']))
+      {
+         return true;
+      }
+   }
+ 
+   public function redirect($url)
+   {
+       header("Location: $url");
+   }
+ 
+   public function logout()
+   {
+        session_destroy();
+        unset($_SESSION['email']);
+        return true;
+   }
+
+
+
+public function encriptar($cadena){
     $key='';  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
     $encrypted = base64_encode(mcrypt_encrypt(MCRYPT_RIJNDAEL_256, md5($key), $cadena, MCRYPT_MODE_CBC, md5(md5($key))));
     return $encrypted; //Devuelve el string encriptado
  
 }
  
-function desencriptar($cadena){
+private function desencriptar($cadena){
      $key='';  // Una clave de codificacion, debe usarse la misma para encriptar y desencriptar
      $decrypted = rtrim(mcrypt_decrypt(MCRYPT_RIJNDAEL_256, md5($key), base64_decode($cadena), MCRYPT_MODE_CBC, md5(md5($key))), "\0");
     return $decrypted;  //Devuelve el string desencriptado

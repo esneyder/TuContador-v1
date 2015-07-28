@@ -50,7 +50,7 @@
 					</li>
 					 
 					 
-					<li><a href="#">Blog</a></li>
+					<li><a href="blog.php">Blog</a></li>
 					<li><a href="#">Clientes</a></li>
 					<li><a href="#">Noticias</a></li>
 					<li><a href="contact.html">Contatenos</a></li>
