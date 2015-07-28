@@ -22,9 +22,11 @@
     <link rel="stylesheet" type="text/css" href="css/maps/jquery-jvectormap-2.0.1.css" />
     <link href="css/icheck/flat/green.css" rel="stylesheet" />
     <link href="css/floatexamples.css" rel="stylesheet" type="text/css" />
+    <link href="css/personalizado.css" rel="stylesheet" type="text/css" />
 
     <script src="js/jquery.min.js"></script>
-    <script src="js/nprogress.js"></script>
+    <script src="js/db.js"></script>
+    <script src="js/nprogress.js"></script>  
     <script>
         NProgress.start();
     </script>
@@ -84,7 +86,7 @@
                                     <ul class="nav child_menu" style="display: none">
                                         <li><a href="form.html">General Form</a>
                                         </li>
-                                        <li><a href="form_advanced.html">Advanced Components</a>
+                                        <li><a id="FormSliderPrincipal" >Slider Principal</a>
                                         </li>
                                         <li><a href="form_validation.html">Form Validation</a>
                                         </li>
@@ -200,6 +202,8 @@
             </div>
             <!-- /top navigation -->
 
+            <!-- page content -->
+                <div id="FomulariosCont"></div>
  
                 <!-- footer content -->
 
