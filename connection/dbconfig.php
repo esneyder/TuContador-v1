@@ -19,12 +19,16 @@ catch(PDOException $e)
 if (is_file("user.crud.php")) { 
 include_once 'user.crud.php';
 $crud = new crud($DB_con);
+
 }elseif (is_file("post.crud.php")) {
  include_once 'post.crud.php';
  $crud = new crud($DB_con);
 }elseif (is_file("get-post.php")) {
 	 include_once 'get-post.php';
     $post = new post($DB_con);
+}elseif (is_file("business.crud.php")) {
+	 include_once 'business.crud.php';
+    $crud = new crud($DB_con);
 }
 
 ?>

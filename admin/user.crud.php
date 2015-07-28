@@ -21,7 +21,7 @@ class crud
              if($email==$userRow['email'] )
              {
              	
-                $_SESSION['email'] = "esneyder";
+                $_SESSION['email'] = $userRow['email'];
                 return true;
              }
              else

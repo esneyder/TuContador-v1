@@ -1,3 +1,7 @@
+<?php include_once 'connection/dbconfig.php'; ?>
+ 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +11,14 @@
 	<style id="colorChanges" type="text/css"></style>
 </head>
 <body class="clearfix" data-smooth-scrolling="1">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.4&appId=1429258377355507";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <div class="met_page_wrapper">
  <header class="met_content">
 	<?php include 'header.php'; ?>
@@ -44,20 +56,36 @@
 
 		<div class="row-fluid">
 			<div class="span9">
+
+                             <?php
+
+                             if(isset($_GET['id'])) {
+                             	$id = $_GET['id'];
+
+
+							 $query = "SELECT * FROM noticias where id=4 ";
+						        $stmt =  $DB_con->prepare($query);
+						        $stmt->execute();    
+						        if($stmt->rowCount()>0)
+						        {
+						            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+						            {
+						            	$categori=$row['categoria'];
+						                ?> 
+				
+
 				<div class="row-fluid">
 					<div class="span12">
 						<div href="blog_detail.html" class="met_blog_list_preview">
-							<img src="http://www.invoiceone.com.mx/wp-content/uploads/2015/06/auditoria.png" alt="" />
+							<img src="<?php print($row['imagen']); ?> " alt="" />
 						</div>
 
 						<span class="met_blog_title">
-						<h2 class="met_bold_one met_color_transition">NIA 320: materialidad o importancia relativa en la auditoría</h2></span>
-						<p>Proin dictum lobortis justo at pretium. Nunc malesuada ante sit amet purus ornare pulvinar. Donec suscipit dignissim ipsum at euismod. Curabitur malesuada lorem sed metus adipiscing in vehicula quam commodo. Sed porttitor elementum elementum. Proin eu ligula eget leo consectetur sodales et non mauris. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-							<br><br>
-						   Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat vehicula, lacus justo semper libero, quis porttitor turpis odio sit amet ligula. Duis dapibus fermentum orci, nec malesuada libero vehicula ut. Integer sodales, urna eget interdum eleifend, nulla nibh laoreet nisl, quis dignissim mauris dolor eget mi. Donec at mauris enim. Duis nisi tellus, adipiscing a convallis quis, tristique vitae risus. Nullam molestie gravida lobortis. Proin ut nibh quis felis auctor ornare. Cras ultricies, nibh at mollis faucibus, justo eros porttitor mi, quis auctor lectus arcu sit amet nunc. Vivamus gravida vehicula arcu, vitae vulputate augue lacinia faucibus.
-							<br><br>
-						   Ut porttitor euismod cursus. Mauris suscipit, turpis ut dapibus rhoncus, odio erat egestas orci, in sollicitudin enim erat id est. Sed auctor gravida arcu, nec fringilla orci aliquet ut. Nullam eu pretium purus. Maecenas fermentum posuere sem vel posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
+						<div class="fb-like"></div>
+						
+						<h2 class="met_bold_one met_color_transition"><?php print($row['titulo']); ?> </h2></span>
+						 <p><?php print($row['intro']); ?> </p>
+						 <p><?php print($row['texto']); ?> </p>
 						<div class="met_blog_miscs clearfix">
 							<div class="met_blog_socials">
 								<a class="met_color_transition" target="_blank" href="https://www.facebook.com/pages/Tu-Contador/140399802639703?fref=ts"><i class="icon-facebook"></i></a>
@@ -67,73 +95,38 @@
 								<a class="met_color_transition" href="#"><i class="icon-rss"></i></a>
 							</div>
 
-							<div class="met_blog_posted_by">Publicado por <a href="#">Acirsas</a></div>
+							<div class="met_blog_posted_by">Publicado por <a href="acirsas.com">Acirsas</a></div>
 
-							<div class="met_blog_posted_by">23/07/2015</div>
+							<div class="met_blog_posted_by"><?php print($row['fecha']); ?> </div>
 						</div>
 					</div>
 				</div>
+				 <?php
+						            }
+						        }
+						        else
+						        {
+						            
+						      echo "No hay datos para mostrar.. ";
 
-				<div class="row-fluid">
-					<div class="span12">
-						<span class="met_blog_comments_title met_color2 met_bgcolor">COMENTARIOS</span>
-						<div class="met_comment_box">
-							<div class="met_comment clearfix">
-								<img src="photos/commentPhotos/1.jpg" alt="" />
-								<div class="met_comment_reply_link met_bgcolor met_color2"><a class="comment-reply-link met_color2" href="#" onclick="">Respuesta</a> <span>↓</span></div>
-								<div class="clearfix met_comment_descr">
-									<h5>Liliana Marcela</h5>
-									<span class="met_color">23 Julio 2015</span>
-									<p>In vel lacinia tortor. Maecenas consectetur pellentesque leo eu suscipit. Maecenas nunc augue, egestas eget condimentum in, iaculis non nibh. Pellentesque ipsum tortor.</p>
-									<div class="met_comment_awaiting_moderation">Your comment is awaiting moderation.</div>
-									<div class="met_comment_edit_link"><a class="comment-edit-link" href="#" title="Edit comment">Editar</a></div>
-								</div>
-							</div>
-							<div class="met_comment met_sub_comment clearfix">
-								<img src="photos/commentPhotos/2.jpg" alt="" />
-								<div class="met_comment_reply_link met_bgcolor met_color2"><a class="comment-reply-link met_color2" href="#" onclick="">Respuesta</a> <span>↓</span></div>
-								<div class="clearfix met_comment_descr">
-									<h5>Luisa Carmen</h5>
-									<span class="met_color">23 Juli 2015</span>
-									<p>Fusce tempus pretium lacus quis tempor. Integer nunc orci, pulvinar vitae accumsan at, sollicitudin sit amet lorem.</p>
-								</div>
-							</div>
-						</div>
-						<div class="met_comment_box">
-							<div class="met_comment clearfix">
-								<img src="photos/commentPhotos/3.jpg" alt="" />
-								<div class="met_comment_reply_link met_bgcolor met_color2"><a class="comment-reply-link met_color2" href="#" onclick="">Respuesta</a> <span>↓</span></div>
-								<div class="clearfix met_comment_descr">
-									<h5>Luis Flores</h5>
-									<span class="met_color">23 Julio 2015</span>
-									<p>Aliquam at mi sed metus porttitor tristique id id nulla. Mauris tortor justo, dictum at tincidunt vel, tristique eu odio. Proin gravida felis ante.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+						        }
+						        }
 
-				<div class="row-fluid">
-					<div class="span12">
-						<h3 class="met_leave_a_reply met_bold_one">DEJA UN COMENTARIO</h3>
-						<span class="met_leave_a_reply_subtitle met_color">
-						Tu dirección de correo electrónico no será publicada. Los campos requeridos estan marcados con *.</span>
+						         ?>
 
-						<form method="post" action="?" class="met_contact_form met_comment_form">
-							<div class="met_long_container clearfix">
-								<input type="text" name="Name" required="" class="met_input_text" id="met_contact_name" placeholder="* Nombre">
-							</div>
-							<div class="met_long_container clearfix">
-								<input type="email" name="Mail" required="" class="met_input_text" id="met_contact_email" placeholder="* E-Mail ">
-							</div>
-							<div class="met_long_container clearfix">
-								<textarea name="Message" required="" class="met_textarea" id="met_contact_textarea" placeholder="* Comentario"></textarea>
-							</div>
-							<button type="submit" class="met_button pull-right met_bgcolor">Enviar</button>
-							<div class="met_contact_thank_you">Comentario enviado exitosamente!</div>
-						</form>
-					</div>
-				</div>
+				<!--zona de comentarios -->
+<div class="n">
+    <div id="fb-root" class="fb_reset">
+        <div style="position: absolute; top: -10000px; height: 0px; width: 0px;">
+        </div>
+    </div>
+    <div class="fb-comments" data-href="https://www.facebook.com/pages/Tu-Contador/140399802639703" data-width="735" data-numposts="5"></div>
+</div>
+<!--zona de comentarios-->
+
+				 
+
+				 
 
 			</div>
 			<div class="span3">
@@ -143,11 +136,26 @@
 							<h2 class="met_title_stack">BLOG</h2>
 							<h3 class="met_title_stack met_bold_one">CATEGORIAS</h3>
 
-							<a href="blog.html">WEB DESIGN</a>
-							<a href="blog.html">CORPORATE IDENTITY</a>
-							<a href="blog.html">SEO OPTIMIZED</a>
-							<a href="blog.html">GRAPHIC DESIGN</a>
-							<a href="blog.html">HTML5 / CSS3</a>
+							 <?php   
+							  $query = "SELECT * FROM categorias where estado=1";
+						        $stmt =  $DB_con->prepare($query);
+						        $stmt->execute();    
+						        if($stmt->rowCount()>0)
+						        {
+						            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+						            {
+						                ?> 
+							<a href="blog.php"><?php print($row['nombre']); ?></a>
+							 
+							 <?php
+						            }
+						        }
+						        else
+						        { 
+						      echo "No hay datos para mostrar.. ";
+
+						        }
+						         ?>
 						</div>
 					</div>
 				</div>
@@ -156,74 +164,18 @@
  <div class="span12">
 		<div class="met_twitter_widget met_color2 met_bgcolor clearfix">
 			<h2 class="met_title_stack">ACTUALIDAD</h2>
-			<h3 class="met_title_stack met_bold_one">TWEETS</h3>
+			 
+			
+			 <a class="twitter-timeline" href="https://twitter.com/acirsas" data-widget-id="624617618352275456">Tweets por el @acirsas.</a>
+             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-			<div class="met_twitter_wrapper">
-				<div class="met_twitter_item clearfix">
-					<i class="icon-twitter"></i>
-					<p>
-						Derecho de petición, implicaciones de la Ley 1755 del 2015 para el empresario
-						<br>
-						<b>#actualicese</b>
-					</p>
-				</div>
-
-				<div class="met_twitter_item clearfix">
-					<i class="icon-twitter"></i>
-					<p>
-						Derecho de petición, implicaciones de la Ley 1755 del 2015 para el empresario
-						<br>
-						<b>#actualicese</b>
-					</p>
-				</div>
-
-				<div class="met_twitter_item clearfix">
-					<i class="icon-twitter"></i>
-					<p>
-						Derecho de petición, implicaciones de la Ley 1755 del 2015 para el empresario
-						<br>
-						<b>#actualicese</b>
-					</p>
-				</div>
-
-				<div class="met_twitter_item clearfix">
-					<i class="icon-twitter"></i>
-					<p>
-						Derecho de petición, implicaciones de la Ley 1755 del 2015 para el empresario
-						<br>
-						<b>#actualicese</b>
-					</p>
-				</div>
-			</div>
+ 
 		</div>
 	</div><!-- Twitter Ticker Ends -->
 
 				</div>
 
-				<div class="row-fluid">
-					<div class="span12">
-						<div class="met_flickr_widget clearfix">
-							<div class="met_flickr_widget_title met_color2 met_bgcolor3">
-								<div>
-									<h2 class="met_title_stack">FLICKR</h2>
-									<h3 class="met_title_stack met_bold_one">PHOTOS</h3>
-								</div>
-							</div>
-							<div class="met_flickr_widget_list clearfix">
-								<a href="#"><img src="photos/flickr/1.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/2.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/3.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/4.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/5.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/6.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/7.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/8.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/9.jpg" alt="" /></a>
-								<a href="#"><img src="photos/flickr/10.jpg" alt="" /></a>
-							</div>
-						</div>
-					</div>
-				</div>
+			 
 
 			</div>
 		</div>

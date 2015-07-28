@@ -1,14 +1,11 @@
 <?php
+session_start();
 include_once '../../connection/dbconfig.php';
  
-      
-        $query = "SELECT * FROM usuarios where email=:email";
-        $stmt =  $DB_con->prepare($query);
-        $stmt->execute();    
-        if($stmt->rowCount()>0)
-        {
-            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
-            {
+$user_email = $_SESSION['email'];
+$stmt = $DB_con->prepare("SELECT * FROM usuarios WHERE email=:email");
+$stmt->execute(array(":email"=>$email));
+$userRow=$stmt->fetch(PDO::FETCH_ASSOC);
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,20 +19,15 @@ include_once '../../connection/dbconfig.php';
 <body>
 
 <div class="header">
-	<div class="left">
-    	<label><a href="http://cleartuts.blogspot.com/">cleartuts - programming blog</a></label>
-    </div>
+ 
     <div class="right">
     	<label><a href="logout.php?logout=true"><i class="glyphicon glyphicon-log-out"></i> logout</a></label>
     </div>
 </div>
 <div class="content">
-welcome : <?php print($userRow['email']); ?>
-<br /><br />
-<p>
-This is Programming Blog Featuring Tutorials on PHP, MySQL, Ajax, jQuery, Web Design and More...<br /><br />
-<a href="http://cleartuts.blogspot.com/2015/04/php-login-and-registration-script-with.html">tutorial link</a>
-</p>
+welcome : <?php echo 'Welcome '.$_SESSION['email']; ?>
+ 
+ 
 </div>
 </body>
 </html>

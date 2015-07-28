@@ -83,7 +83,7 @@ if(isset($msg))
             </div> 
 
              <div class="pure-controls">
-                 <button type="submit" name="btn-update" id="btn-save" class="pure-button pure-button-primary">Uctualizar Post</button>
+                 <button type="submit" name="btn-update" id="btn-save"  class="pure-button pure-button-primary">Uctualizar Post</button>
                   <a href="index.php" class="btn btn-large btn-success"><i class="glyphicon glyphicon-backward"></i> &nbsp; Volver a index</a>             
               </div>    
     </fieldset>

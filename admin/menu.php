@@ -6,7 +6,7 @@
                                 </li>
                                 <li><a><i class="fa fa-edit"></i> Formularios <span class="fa fa-chevron-down"></span></a>
                                     <ul class="nav child_menu" style="display: none">
-                                        <li><a href="form.html">General Form</a>
+                                        <li><a href="form-post.php">Blog</a>
                                         </li>
                                         <li><a href="form_advanced.html">Advanced Components</a>
                                         </li>
