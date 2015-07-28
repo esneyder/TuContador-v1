@@ -23,7 +23,7 @@ if(isset($_POST['btn-login']))
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
+ 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -63,9 +63,8 @@ if(isset($_POST['btn-login']))
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
 
-=======
      <?php include 'nav.php'; ?>
->>>>>>> ebf613311da345e56dd625bf58b1bf987aebfda3
+
 </head>
 
 <body style="background:#F7F7F7;">
@@ -95,7 +94,6 @@ if(isset($_POST['btn-login']))
                         <div>
                             <input type="password" class="form-control" placeholder="Password" required="" name="txt_password"/>
                         </div>
-<<<<<<< HEAD
                     </div>
                     <!-- /menu prile quick info -->
 
@@ -137,13 +135,13 @@ if(isset($_POST['btn-login']))
                                 </li>
                                  
                             </ul>
-=======
+ 
                         <div>
                              <button type="submit" name="btn-login" class="btn btn-block btn-primary">
                             <i class="glyphicon glyphicon-log-in"></i>&nbsp;Login
                             </button>
                              
->>>>>>> ebf613311da345e56dd625bf58b1bf987aebfda3
+ 
                         </div>
                         <div class="clearfix"></div>
                         <div class="separator">
@@ -158,16 +156,16 @@ if(isset($_POST['btn-login']))
                 </section>
                 <!-- content -->
             </div>
-<<<<<<< HEAD
+ 
             <!-- /top navigation -->
 
             <!-- page content -->
                 <div id="FomulariosCont"></div>
  
                 <!-- footer content -->
-=======
+ 
              
->>>>>>> ebf613311da345e56dd625bf58b1bf987aebfda3
+ 
 
 
         </div>
