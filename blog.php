@@ -60,7 +60,7 @@
 				
 				<div class="row-fluid">
 					<div class="span12">
-						<a href="blog_detail.html" class="met_blog_list_preview">
+						<a href="blog_detail.php?id=<?php print($row['id']); ?>" class="met_blog_list_preview">
 							<img src="<?php print($row['imagen']); ?> " alt="" />
 							<aside class="met_blog_preview_bar met_bgcolor met_color2">
 								<div>
@@ -70,7 +70,7 @@
 							</aside>
 						</a>
 
-						<a href="blog_detail.html" class="met_blog_title">
+						<a href="blog_detail.php?id=<?php print($row['id']); ?>" class="met_blog_title">
 						<h2 class="met_bold_one met_color_transition"><?php print($row['titulo']); ?></h2></a>
 						 <p><?php print($row['intro']); ?></p>
 						<div class="met_blog_miscs clearfix">
@@ -84,7 +84,7 @@
 
 							<div class="met_blog_posted_by">posted by <a href="#"><?php print($row['usuario']); ?></a></div>
 
-							<a href="blog_detail.html" class="met_blog_comment_count met_color2">5 Comments</a>
+							<a href="blog_detail.php?id=<?php print($row['id']); ?>" class="met_blog_comment_count met_color2">5 Comments</a>
 						</div>
 					</div>
 				</div>
