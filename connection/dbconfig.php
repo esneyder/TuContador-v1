@@ -1,8 +1,8 @@
 <?php
 
-$DB_host = "localhost";
-$DB_user = "esneyder";
-$DB_pass = "123";
+$DB_host = "db4free.net";
+$DB_user = "tucontador";
+$DB_pass = "tucontador";
 $DB_name = "tucontador";
 
 
