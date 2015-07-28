@@ -63,9 +63,9 @@
 						$listSlider= $fVSlider->GetSlider();
 						foreach ($listSlider as $key => $fila) {
 							echo '
-							<div data-slider-format="big-1-a">
+							<div data-slider-format="big-1-'.$fila['location'].'">
 							<img src="'.$fila['imagen'].'" />
-							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top">
+							<div class="'.$fila['ubicacion'].'">
 								<div class="met_thumbnail_slider_1_title met_bgcolor4">
 									'.$fila['titulo'].'
 									<a href="#" class="met_bgcolor met_color2 met_bgcolor_transition2"></a>
@@ -75,47 +75,7 @@
 						</div>';
 						}
 
-					 ?>	 
-						<div data-slider-format="big-1-a">
-							<img src="http://www.frentecivicosomosmayoria.es/wp-content/uploads/2013/09/comp.jpg" />
-							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top">
-								<div class="met_thumbnail_slider_1_title met_bgcolor4">
-									Análisis Económico
-									<a href="#" class="met_bgcolor met_color2 met_bgcolor_transition2"></a>
-								</div>
-								<div class="met_thumbnail_slider_1_subtitle met_bgcolor5_trans">Fundamentos de la economia</div>
-							</div>
-						</div>
-						<div data-slider-format="big-1-b">
-							<img src="http://www.frentecivicosomosmayoria.es/wp-content/uploads/2015/02/EUUSbridgettip.jpg" />
-							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_top">
-								<div class="met_thumbnail_slider_1_title met_bgcolor4">
-							       Finanzas Personales		
-									<a href="#" class="met_bgcolor met_color2"></a>
-								</div>
-								<div class="met_thumbnail_slider_1_subtitle met_bgcolor5_trans">Errores financieros</div>
-							</div>
-						</div>
-						<div data-slider-format="big-1-c">
-							<img src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2014/07/home_cal_pt.png" />
-							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_bottom">
-								<div class="met_thumbnail_slider_1_title met_bgcolor4">
-									Gerencia y Liderazgo
-									<a href="#" class="met_bgcolor met_color2 met_bgcolor_transition2"></a>
-								</div>
-								<div class="met_thumbnail_slider_1_subtitle met_bgcolor5_trans">Por qué es necesaria la gerencia</div>
-							</div>
-						</div>
-						<div data-slider-format="big-1-d">
-							<img src="http://www.zupot.com/wp-content/uploads/2013/09/multicanais.png" />
-							<div class="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_bottom">
-								<div class="met_thumbnail_slider_1_title met_bgcolor4">
-									Teoría de los Costos
-									<a href="#" class="met_bgcolor met_color2"></a>
-								</div>
-								<div class="met_thumbnail_slider_1_subtitle met_bgcolor5_trans">Los costos y los sistemas contables</div>
-							</div>
-						</div> 
+					 ?>	  
 					</div>
 				</div>
 				<div class="met_thumbnail_slider_1_overlay"></div>

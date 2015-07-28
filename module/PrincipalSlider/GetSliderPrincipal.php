@@ -18,9 +18,30 @@ class GeTSliderPrincipal
 
 			foreach ($cmd->query('SELECT * FROM principal') as $row)
 			 {
+			 	$ubicacion='';
+			 	
+							switch ($row['location']) {
+								case 'a':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top";
+									break;
+								case 'b':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_top";
+									break;
+								case 'c':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_bottom";
+									break;
+								case 'd':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_bottom";
+									break;
+								default:
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top";
+									break;
+							}
 			 	$arrayName[$row['id']] = array(	'imagen' => $row['slider'], 
 			 							'titulo' => $row['titulo'], 
 			 							'subtitulo' => $row['subtitulo'],
+			 							'location' => $row['location'],
+			 							'ubicacion'=>$ubicacion
 			 							 );
 			 }
 
