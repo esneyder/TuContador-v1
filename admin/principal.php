@@ -80,10 +80,35 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Usuarios Registrados</h1>
-                         <?php __UsuariosRegistrados(); ?>
-                        </div>
+                    <div class="col-lg-12">    
+                        <h1>Usuarios Registrados</h1>   
+                        <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>
+                                   Nombre 
+                                </th>
+                                <th>
+                                   Correo 
+                                </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                             <?php 
+                             $rows=__UsuariosRegistrados();
+
+                             foreach ($rows as $key )
+                             {
+                                echo'<tr>
+                                        <td>'.$key['nombre'].'</td>
+                                        <td>'.$key['email'].'</td>
+
+                                    </tr>';
+                             }
+                             ?>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
