@@ -55,7 +55,7 @@
                     <a id="EditSliderPrincipal" href="#" >Slider Principal</a>
                 </li>
                 <li>
-                    <a href="#">Shortcuts</a>
+                    <a id="blog">Shortcuts</a>
                 </li>
                 <li>
                     <a href="#">Overview</a>
@@ -71,6 +71,9 @@
                 </li>
                 <li>
                     <a href="#">Contact</a>
+                </li>
+                <li>
+                <a href="logout.php">Cerrar [<?php echo $_SESSION['name']; ?>]</a>
                 </li>
             </ul>
         </div>
