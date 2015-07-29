@@ -1,7 +1,7 @@
 <?php
 require_once 'includes/login.class.php';
 if($_SESSION["name"]){ 
-header ("Location: panel.php");
+header ("Location: principal.php");
 }
 ?>
 <!DOCTYPE html>
