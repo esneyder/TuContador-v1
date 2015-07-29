@@ -46,7 +46,7 @@
                     </a>
                 </li>
                 <li>
-                    <a id="EditSliderPrincipal">Dashboard</a>
+                    <a id="EditSliderPrincipal" href="#" >Slider Principal</a>
                 </li>
                 <li>
                     <a href="#">Shortcuts</a>
@@ -94,13 +94,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/db.js"></script>
 
-    <!-- Menu Toggle Script -->
-    <script>
-    $("#menu-toggle").click(function(e) {
-        e.preventDefault();
-        $("#wrapper").toggleClass("toggled");
-    });
-    </script>
+
 
 </body>
 

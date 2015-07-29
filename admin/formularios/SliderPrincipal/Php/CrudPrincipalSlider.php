@@ -1,8 +1,8 @@
 <?php
 
-include '/../../connection/Conexion.php';
+include '/../../../../connection/Conexion.php';
 
-class PrincipalSlider()
+class PrincipalSlider
 {
 	private $id;
 	private $titulo;
@@ -10,7 +10,7 @@ class PrincipalSlider()
 	private $imagen;
 	private $texto;
 	private $ubicacion;
-	private $fecha
+	private $fecha;
 
 	public function SetId($id){
 		$this->id=$id;
@@ -156,6 +156,77 @@ class CrudPrincipalSlider
 		}
 
 		return false;
+	}
+
+	public function GetSlider()
+	{
+		$Conexion = new Conexion();
+
+		$cmd= $Conexion->Conectar();
+
+		try
+		{
+			$arrayName = array();
+			$cmd->beginTransaction();
+
+			foreach ($cmd->query('SELECT * FROM principal') as $row)
+			 {
+			 	$ubicacion='';
+			 	
+							switch ($row['location']) {
+								case 'a':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top";
+									break;
+								case 'b':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_top";
+									break;
+								case 'c':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_bottom";
+									break;
+								case 'd':
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_bottom";
+									break;
+								default:
+									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top";
+									break;
+							}
+			 	$arrayName[$row['id']] = array(	
+			 							'imagen' => $row['slider'], 
+			 							'titulo' => $row['titulo'], 
+			 							'subtitulo' => $row['subtitulo'],
+			 							'location' => $row['location'],
+			 							'ubicacion'=>$ubicacion,
+			 							'texto'=>$row['texto']
+			 							 );
+			 }
+
+		$Conexion->CerrarConexion();
+
+		return $arrayName;
+
+		}
+		catch(Exception $e)
+		{
+
+		}
+
+		return $arrayName;
+	} 
+
+	public function GetOneSlider($id){
+		$Conexion=new Conexion();
+		$con = $Conexion->Conectar();
+
+		try{
+			$cmd = $con->prepare("SELECT * FROM principal WHERE id=:id");
+			$stmt->execute(array(":id"=>$id));
+			$editRow=$stmt->fetch(PDO::FETCH_ASSOC);
+			return $editRow;
+		}
+		catch(Exception $e)
+		{
+
+		}
 	}
 }
 

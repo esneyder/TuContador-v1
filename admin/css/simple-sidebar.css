@@ -100,7 +100,11 @@
     visibility: visible;
 }
 
-@media(min-width:936px) {
+#wrapper.toggled {
+        padding-left: 0;
+    }
+
+@media(min-width: 936px) {
     #wrapper {
         padding-left: 250px;
     }

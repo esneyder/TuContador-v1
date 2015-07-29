@@ -16,12 +16,40 @@
     padding: 20px;
     text-align: center;
     vertical-align: top;
-    width: 48%;
+    /*width: 48%;*/
     background-color: white;
 }
 
 .cont-right{
 	margin-left: 20px;
+    display: none;
+}
+
+.table-striped > thead > tr > th{
+    text-align: center;
+}
+
+.table-striped {
+    max-width: 1200px;
+    min-width: 95%;  
+    margin: 0 auto;
+}
+
+
+#ModalEditSlider{
+    max-width: 900px;
+    background-color: white;
+    padding: 20px;
+    margin: 100px auto;
+    max-height: 445px;
+}
+
+#ModalDeleteSlider{
+    max-width: 600px;
+    background-color: white;
+    padding: 20px;
+    margin: 90px auto;
+    height: 250px;
 }
 
 @media (max-width: 936px){
@@ -30,4 +58,12 @@
 		margin: 8px auto;
 	}
 
+    #ModalEditSlider, #ModalDeleteSlider{
+        margin: 10px auto;
+    }
+
+}
+.media-object{
+    max-width: 64px;
+    min-height: 64px;
 }
