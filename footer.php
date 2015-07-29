@@ -3,13 +3,18 @@
 		<div class="row-fluid">
 			<div class="span4">
 				<h3 class="met_color2">PONERSE EN CONTACTO</h3>
-				<span class="met_color2">Lorem ipsum dolor sit amet, consectetur adipisicing</span>
+				<span class="met_color2">
+				
+					<p>nombre</p>
+					<p>corre</p>
+					<p>tele</p>
+					<p>ciudad</p>
+				</span>
 				<div class="met_footer_social_icons">
-					<a class="met_color2 met_color_transition" target="_blank" href="http://www.facebook.com/"><i class="icon-facebook"></i></a>
-					<a class="met_color2 met_color_transition" target="_blank" href="http://twitter.com/"><i class="icon-twitter"></i></a>
-					<a class="met_color2 met_color_transition" target="_blank" href="http://www.pinterest.com/"><i class="icon-pinterest"></i></a>
-					<a class="met_color2 met_color_transition" target="_blank" href="https://plus.google.com/"><i class="icon-google-plus"></i></a>
-					<a class="met_color2 met_color_transition" href="#"><i class="icon-rss"></i></a>
+					<a class="met_color2 met_color_transition" target="_blank" href="https://www.facebook.com/pages/Tu-Contador/140399802639703?fref=ts"><i class="icon-facebook"></i></a>
+					<a class="met_color2 met_color_transition" target="_blank" href="https://twitter.com/acirsas"><i class="icon-twitter"></i></a>
+					 <a class="met_color2 met_color_transition" target="_blank" href="https://plus.google.com/100703969437273280569/posts"><i class="icon-google-plus"></i></a>
+					 
 				</div>
 			</div>
 			<div class="span8">

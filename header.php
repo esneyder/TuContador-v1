@@ -3,13 +3,10 @@
 		<div class="span12">
 			<a href="index.php" class="met_logo met_logo_loading"><img src="img/logo.png" height="44" alt="" /></a>
 			<aside class="clearfix">
-				<a href="http://www.facebook.com/" target="_blank" class="met_color3 met_color_transition"><i class="icon-facebook"></i></a>
-				<a href="http://www.twitter.com/" target="_blank" class="met_color3 met_color_transition"><i class="icon-twitter"></i></a>
-				<a href="https://plus.google.com/" target="_blank" class="met_color3 met_color_transition"><i class="icon-google-plus"></i></a>
-				<a href="http://www.pinterest.com/" target="_blank" class="met_color3 met_color_transition"><i class="icon-pinterest"></i></a>
-				<a href="#" class="met_color3 met_color_transition"><i class="icon-rss"></i></a>
-
-				<nav>
+				<a href="https://www.facebook.com/pages/Tu-Contador/140399802639703?fref=ts" target="_blank" class="met_color3 met_color_transition"><i class="icon-facebook"></i></a>
+				<a href="https://twitter.com/acirsas" target="_blank" class="met_color3 met_color_transition"><i class="icon-twitter"></i></a>
+				<a href="https://plus.google.com/100703969437273280569/posts" target="_blank" class="met_color3 met_color_transition"><i class="icon-google-plus"></i></a>
+				 <nav>
 					<ul>
 						<li><a href="#" class="met_color_transition">Noticias</a></li>
 						<li><a href="#" class="met_color_transition">FAQ</a></li>
@@ -24,7 +21,7 @@
 					<li>
 						<a href="index.php">Inicio</a>
 					</li>
-					<li><a href="about.html">Nosotros</a></li>
+					<li><a href="about.php">Nosotros</a></li>
 					 
 					<li>
 						<a href="#">Portafolio</a>
@@ -53,6 +50,7 @@
 					<li><a href="blog.php">Blog</a></li>
 					<li><a href="#">Clientes</a></li>
 					<li><a href="#">Noticias</a></li>
+					<li><a href="#">Perfiles</a></li>
 					<li><a href="contact.html">Contatenos</a></li>
 				</ul>
 			</div><!-- /dl-menuwrapper -->

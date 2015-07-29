@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
 	<?php include 'head.php'; ?>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
@@ -15,22 +15,19 @@
 	<?php include 'header.php'; ?>
      
 
-	<div id="bgBody" class="bgCarouselH">
-		<script type="text/javascript">
-		  // <![CDATA[
-		  var bgHost = "http://www.applab.in/";
-		  var bgType = "CL-19288-1";
-		  var bgIndi = "94|95|96|97|100|163|164|165";
-		  (function(d){ 
-		  	var f = bgHost+ 
-		  	"apps/indicators/"+bgType+"/"+
-		  	bgIndi+"/functions.js"; 
-		  	
-		  	d.write(unescape("%3Cscript src='"+f+
-		  		"' type='text/javascript'%3E%3C/script%3E")); })(document);
-		  // ]]>
-		</script>
-	</div>
+	 <div id="bgBody" class="bgCarouselH">
+<script type="text/javascript">
+  // <![CDATA[
+  var bgHost = "http://www.applab.in/";
+  var bgType = "CO-19288-1";
+  var bgIndi = "9|3|6|5|7|10|4";
+  (function(d){ var f = bgHost+ 
+  	"apps/indicators/"+bgType+"/"+bgIndi+"/functions.js";
+  	 d.write(unescape("%3Cscript src='"+f
+  	 	+"' type='text/javascript'%3E%3C/script%3E")); })(document);
+  // ]]>
+</script>
+</div>
 	
 
 </header><!-- Header Ends  -->
@@ -83,67 +80,46 @@
 		</div>
 
 
-<div class="span3">
+     <div class="span3">
 		<h2 class="met_bold_one met_title_with_pager met_clear_margin_top clearfix">
 			 RECIENTES
 			<nav class="met_recent_works_pages"></nav>
 		</h2>
-
+      <?php include_once 'connection/dbconfig.php'; ?>
 		<div class="met_recent_works clearfix">
+			                <?php   
+							 $query = "SELECT * FROM noticias ";
+						        $stmt =  $DB_con->prepare($query);
+						        $stmt->execute();    
+						        if($stmt->rowCount()>0)
+						        {
+						            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+						            {
+						                ?> 
 			<div class="met_recent_work_item">
-				<a href="portfolio_detail.html" class="met_recent_work_image"><img src="photos/recentWorks/1.jpg" alt=""></a>
+				<a href="blog_detail.php" class="met_recent_work_image">
+				<img src="<?php print($row['mini']); ?>" alt=""></a>
 				<div class="met_recent_work_overbox met_bgcolor">
 					<a href="#">
-						<span class="met_color2">NIFF</span>
+						<span class="met_color2"><?php print($row['fecha']); ?></span>
 						<i class="icon-plus met_color2"></i>
 					</a>
 				</div>
 			</div>
-			<div class="met_recent_work_item">
-				<a href="portfolio_detail.html" class="met_recent_work_image"><img src="photos/recentWorks/2.jpg" alt=""></a>
-				<div class="met_recent_work_overbox met_bgcolor">
-					<a href="#">
-						<span class="met_color2">CONTABILIDAD</span>
-						<i class="icon-plus met_color2"></i>
-					</a>
-				</div>
-			</div>
-			<div class="met_recent_work_item">
-				<a href="portfolio_detail.html" class="met_recent_work_image"><img src="photos/recentWorks/3.jpg" alt=""></a>
-				<div class="met_recent_work_overbox met_bgcolor">
-					<a href="#">
-						<span class="met_color2">DOLLAR</span>
-						<i class="icon-plus met_color2"></i>
-					</a>
-				</div>
-			</div>
-			<div class="met_recent_work_item">
-				<a href="portfolio_detail.html" class="met_recent_work_image"><img src="photos/recentWorks/1.jpg" alt=""></a>
-				<div class="met_recent_work_overbox met_bgcolor">
-					<a href="#">
-						<span class="met_color2">SEGURIDAD</span>
-						<i class="icon-plus met_color2"></i>
-					</a>
-				</div>
-			</div>
-			<div class="met_recent_work_item">
-				<a href="portfolio_detail.html" class="met_recent_work_image"><img src="photos/recentWorks/2.jpg" alt=""></a>
-				<div class="met_recent_work_overbox met_bgcolor">
-					<a href="#">
-						<span class="met_color2">HOSTING</span>
-						<i class="icon-plus met_color2"></i>
-					</a>
-				</div>
-			</div>
-			<div class="met_recent_work_item">
-				<a href="portfolio_detail.html" class="met_recent_work_image"><img src="photos/recentWorks/3.jpg" alt=""></a>
-				<div class="met_recent_work_overbox met_bgcolor">
-					<a href="#">
-						<span class="met_color2">STADISTICA</span>
-						<i class="icon-plus met_color2"></i>
-					</a>
-				</div>
-			</div>
+			<?php
+				  }
+				  }
+					 else
+					 {
+						            
+					 echo "No hay datos para mostrar.. ";
+
+					 }
+					 ?>
+			 
+			 
+			 
+			 
 		</div>
 	</div>
 
@@ -262,8 +238,15 @@
 			<h2 class="met_title_stack">ACTUALIDAD</h2>
  
 
-			 <a class="twitter-timeline" href="https://twitter.com/acirsas" data-widget-id="624617618352275456">Tweets por el @acirsas.</a>
-             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			 <a class="twitter-timeline" 
+			 href="https://twitter.com/acirsas"
+			  data-widget-id="624617618352275456">Tweets por el @acirsas.</a>
+             <script>!function(d,s,id){
+             	var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?
+             	'http':'https';if(!d.getElementById(id)){
+             		js=d.createElement(s);js.id=id;js.src=p
+             		+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
+             		(document,"script","twitter-wjs");</script>
 
 
 

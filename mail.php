@@ -22,7 +22,7 @@ if(!isset($_POST["nl_sub"])){
 
 //Subject of mail
 	$subject = 'Nuevo mensaje del portal Acirsas';
-
+    
 	$headers  = "MIME-Version: 1.0 \n";
 	$headers .= "Content-type: text/html; charset=utf-8 \n";
 	$headers .= "From: "     . $fromMail. " \n".

@@ -1,9 +1,8 @@
 <?php include_once 'connection/dbconfig.php'; ?>
- 
-
+  
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="utf-8" />
 
@@ -63,7 +62,7 @@
                              	$id = $_GET['id'];
 
 
-							 $query = "SELECT * FROM noticias where id=4 ";
+							 $query = "SELECT * FROM noticias where id=$id ";
 						        $stmt =  $DB_con->prepare($query);
 						        $stmt->execute();    
 						        if($stmt->rowCount()>0)
@@ -82,7 +81,9 @@
 
 						<span class="met_blog_title">
 						<div class="fb-like"></div>
-						
+						<a class="twitter-share-button"
+  href="https://twitter.com/intent/tweet">
+Tweet</a>
 						<h2 class="met_bold_one met_color_transition"><?php print($row['titulo']); ?> </h2></span>
 						 <p><?php print($row['intro']); ?> </p>
 						 <p><?php print($row['texto']); ?> </p>

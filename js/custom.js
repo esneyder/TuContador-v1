@@ -296,7 +296,8 @@ $(document).ready(function(){
 			success: function(returnedInfo){
 
 				var message = $('.met_contact_thank_you');
-				returnedInfo == 1 ? message.show() : message.html('Our Mail Servers Are Currently Down').show();
+				returnedInfo == 1 ?
+				 message.show() : message.html('Our Mail Servers Are Currently Down').show();
 				setInterval(function(){message.fadeOut()},5000);
 				me.removeAttr('disabled');
 

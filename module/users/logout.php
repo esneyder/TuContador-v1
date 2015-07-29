@@ -1,9 +1,9 @@
 <?php
-include_once '../../connection/dbconfig.php';
+include_once '../connection/dbconfig.php';
 
 if($_SESSION['email']!="")
 {
-	$crud->redirect('home.php');
+	$crud->redirect('principal.php');
 }
 if(isset($_GET['logout']) && $_GET['logout']=="true")
 {

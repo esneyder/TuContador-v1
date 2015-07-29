@@ -1,9 +1,9 @@
 <?php
 
-$DB_host = "db4free.net";
-$DB_user = "tucontador";
-$DB_pass = "tucontador";
-$DB_name = "tucontador";
+$DB_host = "50.62.209.74:3306";
+$DB_user = "tucontador2015";
+$DB_pass = "BDtucontador2015";
+$DB_name = "admon10_tucontador";
 
 
 try

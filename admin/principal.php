@@ -1,3 +1,9 @@
+<?php session_start() ?>
+<?php if(isset($_SESSION['name']))
+{
+}else{ header("Location: index.php");}?>
+<?php require_once 'includes/functions.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,9 +13,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Acirsas.com">
 
-    <title>Simple Sidebar - Start Bootstrap Template</title>
+    <title>Acirsas - Administración</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,13 +42,13 @@
 </left>
 
     <div id="wrapper">
-
+ 
         <!-- Sidebar -->
         <div id="sidebar-wrapper">
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        Administración
                     </a>
                 </li>
                 <li>
@@ -72,15 +78,41 @@
 
         <!-- Page Content -->
         <div id="page-content-wrapper">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1>Simple Sidebar</h1>
-                        <p>This template has a responsive menu toggling system. The menu will appear collapsed on smaller screens, and will appear non-collapsed on larger screens. When toggled using the button below, the menu will appear/disappear. On small screens, the page content will be pushed off canvas.</p>
-                        <p>Make sure to keep all page content within the <code>#page-content-wrapper</code>.</p>
-                    </div>
-                </div>
-            </div>
+
+       
+        <nav class="navbar navbar-default" role="navigation">
+  
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="acirsas.com">Acirsas.com</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="logout.php">Cerrar Sesion [<?php echo $_SESSION['name']; ?>]</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  
+</nav>
+
+     
+
+
+            <div class="container">
+          <div class="row">
+             <div class="col-md-12" style="text-align:center; margin-top:100px;">
+             <label>Usuarios Registrados</label>
+            <?php __UsuariosRegistrados(); ?>
+             </div>
+  </div>
+</div>
         </div>
         <!-- /#page-content-wrapper -->
 

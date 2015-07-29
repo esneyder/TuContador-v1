@@ -1,6 +1,6 @@
 <ul>
 		<li class="met_bgcolor_transition2"><a href="index.php" class="met_menu_home"><i class="icon-home"></i></a></li>
-		<li class="met_bgcolor_transition2"><a href="about.html">Nosotros</a></li>		 
+		<li class="met_bgcolor_transition2"><a href="about.php">Nosotros</a></li>		 
 		<li class="met_bgcolor_transition2">
 			<a href="#">Portafolio</a>
 			<ul>
@@ -25,7 +25,8 @@
 		 
 		 
 		 <li class="met_bgcolor_transition2"><a href="blog.php">Blog</a></li>
-		 <li class="met_bgcolor_transition2"><a href="#">Clientes</a></li>
+		 <li class="met_bgcolor_transition2"><a href="clients.php">Clientes</a></li>
 		 <li class="met_bgcolor_transition2"><a href="#">Noticias</a></li>
+		<li class="met_bgcolor_transition2"><a href="contact.php">Perfiles</a></li>
 		<li class="met_bgcolor_transition2"><a href="contact.php">Contactenos</a></li>
 	</ul>
