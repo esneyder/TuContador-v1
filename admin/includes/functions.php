@@ -15,6 +15,8 @@ if(empty($rows)) {
 		echo "</option>";
 	}
 	else {
+
+		return $rows;
 		foreach ($rows as $row) {
 
 				echo "<p class='usuariosregistrados'>".$row['nombre']."</p>";
