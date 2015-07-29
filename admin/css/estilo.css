@@ -1,0 +1,34 @@
+.BodyIndex{
+	background-image: url('http://www.dniconsultores.com/images/slider/slide1.jpg'); 
+}
+
+#page-content-wrapper{
+	background-color: #F3F3F4;
+}
+
+.btndiseno {
+	position: fixed;
+    z-index: 10000;
+    margin-top: 20px;
+    right: 20px; 
+}
+
+.form-signin{
+	max-width: 550px;
+	margin: 50px auto;
+}
+
+.LogoIndex{
+	max-width: 550px;
+	margin: 0px auto;
+	max-width: 250px;
+    padding-bottom: 10px
+}
+
+.LogoIndex > h2, .LogoIndex > img {
+	display: inline;
+}
+
+#enviar {
+	margin: 10px 0px 0px 0px;
+}

@@ -1,0 +1,33 @@
+#ContForm
+{
+	max-width: 1000px;
+}
+
+.input-group{
+	width: 100%;
+	margin-top: 10px;
+}
+
+.cont-left, .cont-right{
+    display: inline-block;
+    margin: 8px auto;
+    max-width: 1200px;
+    min-height: 229px;
+    padding: 20px;
+    text-align: center;
+    vertical-align: top;
+    width: 48%;
+    background-color: white;
+}
+
+.cont-right{
+	margin-left: 20px;
+}
+
+@media (max-width: 936px){
+	.cont-left, .cont-right{
+		width: 95%;
+		margin: 8px auto;
+	}
+
+}
