@@ -4,9 +4,7 @@
 <head>
 	<meta charset="utf-8" />
 
-	 <?php include 'head.php'; ?>
-
-	 
+	 <?php include 'head.php'; ?> 
 
 	<style id="colorChanges" type="text/css"></style>
 </head>
@@ -51,93 +49,89 @@
 
 			<div class="row-fluid">
 				<div class="span12">
+
+
+                     <?php   
+							 $query = "SELECT * FROM about";
+						        $stmt =  $DB_con->prepare($query);
+						        $stmt->execute();    
+						        if($stmt->rowCount()>0)
+						        {
+						            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+						            {
+						                ?>
 					<div class="met_text_block">
-						<h2 class="met_bold_one">Bienvenido  </h2>
+						<h2 class="met_bold_one"><?php print($row['titulo']); ?>  </h2>
 						<p> 
-							Ofrecemos una gama de servicios de consultoría, todos diseñados para ayudar a su empresa a alcanzar su potencial. Ya sea que esté buscando  hacer pequeños ajustes  o una revisión completa, tenemos todo cubierto. Nuestros servicios están disponibles para que pueda obtener exactamente lo que necesita
-
-
+							 <?php print($row['texto']); ?>
 						</p>
-						<br>
-						<h4 class="met_bold_one">POR QUÉ ELEGIRNOS?</h4>
-						<p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui <span class="met_color">officia deserunt mollitia distinctio</span>. Nam libero tempore, cum soluta nobis est eligendi optio volu dolor repellendus.</p>
-					</div>
+						 </div>
+						 <?php
+					  }
+					  }
+						 else
+					 {
+						            
+					 echo "No hay datos para mostrar.. ";
+
+					 }
+					 ?>	
+
+
+
 				</div>
 			</div>
 
 			<div class="row-fluid">
+					 <?php   
+							 $query = "SELECT * FROM personas";
+						        $stmt =  $DB_con->prepare($query);
+						        $stmt->execute();    
+						        if($stmt->rowCount()>0)
+						        {
+						            while($row=$stmt->fetch(PDO::FETCH_ASSOC))
+						            {
+						                ?> 
+
 				<div class="span4">
 					<div class="met_team_member">
+
 						<div class="met_team_member_preview">
-							<img src="photos/teamMembers/1.jpg" alt="" />
+							<img src="<?php print($row['imagen']); ?>" alt="<?php print($row['nombre']); ?>" />
 							<div class="met_team_member_overlay">
-								<div class="met_team_member_skill"><div style="width: 90%"><span class="met_bgcolor_trans met_color2">DISEÑO</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 60%"><span class="met_bgcolor_trans met_color2">Illistration</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 70%"><span class="met_bgcolor_trans met_color2">EXPERIENCIA</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 65%"><span class="met_bgcolor_trans met_color2">HTML5</span></div></div>
+								<div class="met_team_member_skill"><div style="width: 90%"><span class="met_bgcolor_trans met_color2"><?php print($row['caracteristica1']); ?></span></div></div>
+								<div class="met_team_member_skill"><div style="width: 60%"><span class="met_bgcolor_trans met_color2"><?php print($row['caracteristica2']); ?></span></div></div>
+								<div class="met_team_member_skill"><div style="width: 70%"><span class="met_bgcolor_trans met_color2"><?php print($row['caracteristica3']); ?></span></div></div>
+								<div class="met_team_member_skill"><div style="width: 65%"><span class="met_bgcolor_trans met_color2"><?php print($row['caracteristica4']); ?></span></div></div>
 							</div>
 						</div>
+
 						<div class="met_team_member_details met_bgcolor3 met_color2">
-							<h2 class="met_title_stack">DISEÑO</h2>
-							<h3 class="met_title_stack met_bold_one">Julian Rivera</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. </p>
+							<h2 class="met_title_stack"><?php print($row['cargo']); ?></h2>
+							<h3 class="met_title_stack met_bold_one"><?php print($row['nombre']); ?></h3>
+							<p><?php print( substr($row['descripcion'], 0, 100).'(...)' ); ?></p>
 						</div>
+
 						<div class="met_team_member_socials met_bgcolor clearfix">
-							<a href="http://www.facebook.com/" target="_blank" class="met_color2"><i class="icon-facebook"></i></a>
-							<a href="http://www.twitter.com/" target="_blank" class="met_color2"><i class="icon-twitter"></i></a>
-							<a href="http://www.google.com/" target="_blank" class="met_color2"><i class="icon-google-plus"></i></a>
-							<a href="#" target="_blank" class="met_color2"><i class="icon-envelope"></i></a>
+							<a href="<?php print($row['facebook']); ?>" target="_blank" class="met_color2"><i class="icon-facebook"></i></a>
+							<a href="<?php print($row['twitter']); ?>" target="_blank" class="met_color2"><i class="icon-twitter"></i></a>
+							<a href="<?php print($row['google']); ?>" target="_blank" class="met_color2"><i class="icon-google-plus"></i></a>
+							 
 						</div>
 					</div>
 				</div>
-				<div class="span4">
-					<div class="met_team_member">
-						<div class="met_team_member_preview">
-							<img src="photos/teamMembers/2.jpg" alt="" />
-							<div class="met_team_member_overlay">
-								<div class="met_team_member_skill"><div style="width: 80%"><span class="met_bgcolor_trans met_color2">Responsive</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 90%"><span class="met_bgcolor_trans met_color2">Php</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 70%"><span class="met_bgcolor_trans met_color2">HTML5</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 65%"><span class="met_bgcolor_trans met_color2">CSS3</span></div></div>
-							</div>
-						</div>
-						<div class="met_team_member_details met_bgcolor3 met_color2">
-							<h2 class="met_title_stack">PROGRAMADOR</h2>
-							<h3 class="met_title_stack met_bold_one">Sebastian Mejia</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. </p>
-						</div>
-						<div class="met_team_member_socials met_bgcolor clearfix">
-							<a href="http://www.facebook.com/" target="_blank" class="met_color2"><i class="icon-facebook"></i></a>
-							<a href="http://www.twitter.com/" target="_blank" class="met_color2"><i class="icon-twitter"></i></a>
-							<a href="http://www.google.com/" target="_blank" class="met_color2"><i class="icon-google-plus"></i></a>
-							<a href="#" target="_blank" class="met_color2"><i class="icon-envelope"></i></a>
-						</div>
-					</div>
-				</div>
-				<div class="span4">
-					<div class="met_team_member">
-						<div class="met_team_member_preview">
-							<img src="photos/teamMembers/3.jpg" alt="" />
-							<div class="met_team_member_overlay">
-								<div class="met_team_member_skill"><div style="width: 90%"><span class="met_bgcolor_trans met_color2">HTML5</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 80%"><span class="met_bgcolor_trans met_color2">CSS</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 70%"><span class="met_bgcolor_trans met_color2">Javascript</span></div></div>
-								<div class="met_team_member_skill"><div style="width: 60%"><span class="met_bgcolor_trans met_color2">Fireworks</span></div></div>
-							</div>
-						</div>
-						<div class="met_team_member_details met_bgcolor3 met_color2">
-							<h2 class="met_title_stack">DEVELOPER</h2>
-							<h3 class="met_title_stack met_bold_one">JUAN ANDRES</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. </p>
-						</div>
-						<div class="met_team_member_socials met_bgcolor clearfix">
-							<a href="http://www.facebook.com/" target="_blank" class="met_color2"><i class="icon-facebook"></i></a>
-							<a href="http://www.twitter.com/" target="_blank" class="met_color2"><i class="icon-twitter"></i></a>
-							<a href="http://www.google.com/" target="_blank" class="met_color2"><i class="icon-google-plus"></i></a>
-							<a href="#" target="_blank" class="met_color2"><i class="icon-envelope"></i></a>
-						</div>
-					</div>
-				</div>
+			 <?php
+					  }
+					  }
+						 else
+					 {
+						            
+					 echo "No hay datos para mostrar.. ";
+
+					 }
+					 ?>			
+
+				  
 			</div>
 
 		</div>

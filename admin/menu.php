@@ -27,10 +27,10 @@
                 </li>
                 
                 <li>
-                    <a href="#">Perfiles</a>
+                    <a href="people.php">Perfiles</a>
                 </li>
                 <li>
-                    <a href="#">Empresa</a>
+                    <a href="about.php">Nosotros</a>
                 </li>
                 <li>
                     <a href="category.php">Catagorías</a>
