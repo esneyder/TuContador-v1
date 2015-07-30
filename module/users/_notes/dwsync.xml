@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="add-data.php" server="50.62.160.149" local="130824444822626208" remote="130826040600000000" Dst="0" />
-<file name="class.inputfilter.php5" server="50.62.160.149" local="130825930438723606" remote="130826040600000000" Dst="0" />
-<file name="delete.php" server="50.62.160.149" local="130824460397700991" remote="130826040600000000" Dst="0" />
-<file name="edit-data.php" server="50.62.160.149" local="130824458574818090" remote="130826040600000000" Dst="0" />
-<file name="home.php" server="50.62.160.149" local="130825300922134701" remote="130826040600000000" Dst="0" />
-<file name="index.php" server="50.62.160.149" local="130825094999722745" remote="130826040600000000" Dst="0" />
-<file name="logout.php" server="50.62.160.149" local="130825097587078672" remote="130826040600000000" Dst="0" />
-<file name="sign-up.php" server="50.62.160.149" local="130742148983409041" remote="130826040600000000" Dst="0" />
-<file name="style.css" server="50.62.160.149" local="130742102348883800" remote="130826040600000000" Dst="0" />
-<file name="user.crud.php" server="50.62.160.149" local="130825292911137311" remote="130826040600000000" Dst="0" />
-<file name="users.php" server="50.62.160.149" local="130824407772211138" remote="130826040600000000" Dst="0" />
+<file name="add-data.php" server="50.62.160.149" local="130824444822626208" remote="130827521400000000" Dst="0" />
+<file name="class.inputfilter.php5" server="50.62.160.149" local="130825930438723606" remote="130827521400000000" Dst="0" />
+<file name="delete.php" server="50.62.160.149" local="130824460397700991" remote="130827521400000000" Dst="0" />
+<file name="edit-data.php" server="50.62.160.149" local="130824458574818090" remote="130827521400000000" Dst="0" />
+<file name="home.php" server="50.62.160.149" local="130825300922134701" remote="130827521400000000" Dst="0" />
+<file name="index.php" server="50.62.160.149" local="130825094999722745" remote="130827521400000000" Dst="0" />
+<file name="logout.php" server="50.62.160.149" local="130826694031152314" remote="130827521400000000" Dst="0" />
+<file name="sign-up.php" server="50.62.160.149" local="130742148983409041" remote="130827521400000000" Dst="0" />
+<file name="style.css" server="50.62.160.149" local="130742102348883800" remote="130827521400000000" Dst="0" />
+<file name="user.crud.php" server="50.62.160.149" local="130825292911137311" remote="130827521400000000" Dst="0" />
+<file name="users.php" server="50.62.160.149" local="130824407772211138" remote="130827521400000000" Dst="0" />
 </dwsync>

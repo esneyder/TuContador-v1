@@ -43,8 +43,8 @@ $(document).ready(function(){
 			scrollspeed: 60,
 			mousescrollstep: 35,
 			cursorwidth: 10,
-			cursorborder: '1px solid #7E8A96',
-			cursorcolor: '#18ADB6',
+			cursorborder: '1px solid #F39C12',
+			cursorcolor: '#F39C12',
 			cursorborderradius: 10,
 			autohidemode: false,
 			cursoropacitymin: 0.1,
@@ -173,7 +173,7 @@ $(document).ready(function(){
 				$('.met_twitter_wrapper').html('');
 				for (var i=0; i<feeds.length; i++) {
 					var status = feeds[i].text;
-					$('.met_twitter_wrapper').append('<div class="met_twitter_item clearfix"><i class="icon-twitter"></i><p>'+status+'</p></div>');
+					$('.met_twitter_wrapper').append('<div class="met_twitter_item smooth"><i class="icon-twitter"></i><p>'+status+'</p></div>');
 				}
 			}).done(function(){
 				$(".met_twitter_wrapper").carouFredSel({

@@ -13,10 +13,10 @@
 class DBC
 {
 	private static $instance = null;
-	private static $host = 'localhost';
-	private static $db = 'tucontador';
-	private static $user = 'esneyder';
-	private static $pass = '123';
+	private static $host = '50.62.209.74:3306';
+	private static $db = 'admon10_tucontador';
+	private static $user = 'tucontador2015';
+	private static $pass = 'BDtucontador2015';
 	
 	public static function get()
 	{

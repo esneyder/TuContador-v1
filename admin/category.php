@@ -82,10 +82,7 @@ class CkEditor extends Common
         echo $javascript;
     }
 
-    public function addCkEditor()
-    {
-        $this->Editor->addJavascript('addCkEditor("'.$this->instanceName.'texto");');
-    }
+    
     
     protected function initiateEditor()
     {
@@ -95,12 +92,20 @@ class CkEditor extends Common
         );
          $tableColumns['nombre'] = array(
             'display_text' => 'Nombre', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
-         $tableColumns['estado'] = array(
-            'display_text' => 'Estado', 
-            'perms' => 'EVCTAXQSHO'
-        );
+          $tableColumns['estado'] = array(
+            'display_text' => 'Estado',
+             'perms' => 'EVCTAXQS',
+             'req' => true,
+            'join' => array(
+                'table' => 'estado', 
+                'column' => 'id', 
+                'display_mask' => "nombrEstado", 
+                'type' => 'left',
+                'alias' => 'estado'
+            )   );
          
         $tableName = 'categorias';
         $primaryCol = 'id';

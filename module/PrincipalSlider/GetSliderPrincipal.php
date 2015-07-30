@@ -21,16 +21,16 @@ class GeTSliderPrincipal
 			 	$ubicacion='';
 			 	
 							switch ($row['location']) {
-								case 'a':
+								case 'a'://Superior Izquierda
 									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top";
 									break;
-								case 'b':
+								case 'b': //Superior Derecha
 									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_top";
 									break;
-								case 'c':
+								case 'c'://Inferior Izquierda
 									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_bottom";
 									break;
-								case 'd':
+								case 'd'://Inferior Derecha
 									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_right met_thumbnail_slider_1_bottom";
 									break;
 								default:

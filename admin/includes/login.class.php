@@ -34,7 +34,7 @@ class Login
 		
 		try {
 			
-			$sql = "SELECT * from usuarios WHERE email = ? AND password = ?";
+			$sql = 'SELECT * from usuarios WHERE email = ? AND password = ? AND permiso="Administrador"';
 			$query = $this->dbh->prepare($sql);
 			$query->bindParam(1,$email);
 			$query->bindParam(2,sha1($password));

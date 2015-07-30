@@ -95,36 +95,42 @@ class CkEditor extends Common
         );
         $tableColumns['imagen'] = array(
             'display_text' => 'Link Imagen', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
         $tableColumns['mini'] = array(
             'display_text' => 'Preview', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
         $tableColumns['titulo'] = array(
             'display_text' => 'Título', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
         $tableColumns['intro'] = array(
             'display_text' => 'Introducción', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
           
          $tableColumns['texto'] = array(
             'display_text' => 'Descripción', 
             'perms' => 'EVCTAXQSHO', 
             'textarea' => array('rows' => 8, 'cols' => 25), 
-            'sub_str' => 30
+            'sub_str' => 30,
+            'req' => true
         );
-          $tableColumns['id'] = array(
-            'display_text' => 'Categioria',
+          $tableColumns['categoria'] = array(
+            'display_text' => 'Categoria',
              'perms' => 'EVCTAXQS',
+             'req' => true,
             'join' => array(
                 'table' => 'categorias', 
-                'column' => 'id', 
+                'column' => 'nombre', 
                 'display_mask' => " nombre", 
                 'type' => 'left',
-                'alias' => 'cat'
+                'alias' => 'nombre'
             )   );
         $tableColumns['fecha'] = array(
             'display_text' => 'Fecha', 
@@ -146,7 +152,7 @@ class CkEditor extends Common
         
         $this->Editor = new AjaxTableEditor($tableName,$primaryCol,
             $errorFun,$permissions,$tableColumns);
-        $this->Editor->setConfig('tableInfo','class="mateTable table table-striped table-hover"');
+        $this->Editor->setConfig('tableInfo','class=" table table-striped table-hover"');
         $this->Editor->setConfig('orderByColumn','first_name');
         $this->Editor->setConfig('tableTitle','Administración Blog');
         $this->Editor->setConfig('addRowTitle','Nuevo Post');

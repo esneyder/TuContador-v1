@@ -100,18 +100,10 @@ session_start() ?>
     <script src="js/bootstrap.min.js"></script>
 
 <script>
-     $(document).on('ready',principal);
-
-        function principal() {
-            alert('a');
-        $('#menu-toggle').on('click',menu);
-        }
-
-        function menu()
-        {
-            alert('b');
-        $("#wrapper").toggleClass("toggled");
-        }
+     $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
 
         </script>
 

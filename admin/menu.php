@@ -25,9 +25,7 @@
                 <li>
                     <a href="blog.php">Blog</a>
                 </li>
-                <li>
-                    <a href="#">Usuarios</a>
-                </li>
+                
                 <li>
                     <a href="#">Perfiles</a>
                 </li>
@@ -35,10 +33,10 @@
                     <a href="#">Empresa</a>
                 </li>
                 <li>
-                    <a href="category.php">Catégorias</a>
+                    <a href="category.php">Catagorías</a>
                 </li>
                 <li>
-                    <a href="#">Contacto</a>
+                    <a href="../contact.php">Contacto</a>
                 </li>
                 <li>
                 <a href="logout.php">Salir [<?php echo $_SESSION['name']; ?>]</a>

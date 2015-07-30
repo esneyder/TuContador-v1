@@ -48,7 +48,7 @@ class Common
 	 	<link href="css/icon_styles.css" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="css/estilo.css">
 		  <link href="css/simple-sidebar.css" rel="stylesheet">
-  
+		 
 		<link href="js/jquery/css/redmond/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="js/jquery/js/jquery-1.8.3.js"></script>
 		<script type="text/javascript" src="js/jquery/js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -75,16 +75,10 @@ class Common
 		</div>
 		</body>
 		<script>
-			$(document).on('ready',principal);
-
-		function principal() {
-		$('#menu-toggle').on('click',menu);
-		}
-
-		function menu()
-		{
-        $("#wrapper").toggleClass("toggled");
-		}
+		$("#menu-toggle").click(function(e) {
+		        e.preventDefault();
+		        $("#wrapper").toggleClass("toggled");
+		    });
 
 		</script>
 		</html>

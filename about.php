@@ -148,7 +148,7 @@
 
 				<div class="met_cacoon_sidebar_wrapper">
 				             <?php   
-							 $query = "SELECT * FROM noticias ";
+							 $query = "SELECT * FROM noticias ORDER BY fecha DESC LIMIT 3";
 						        $stmt =  $DB_con->prepare($query);
 						        $stmt->execute();    
 						        if($stmt->rowCount()>0)
@@ -162,7 +162,7 @@
 							 
 							<article>
 								<a href="blog_detail.php?id=<?php print($row['id']); ?>"><h3 class="met_color2"><?php print($row['titulo']); ?></h3></a>
-							 <p><?php print($row['intro']); ?></p>
+							 <p><?php print( substr($row['intro'], 0, 200).'(...)' ); ?></p>
 							 </article>
 						</div>
 					</div>

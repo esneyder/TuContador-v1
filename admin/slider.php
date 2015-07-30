@@ -92,18 +92,22 @@ class CkEditor extends Common
          $tableColumns['id'] = array(
             'display_text' => 'ID', 
             'perms' => 'TVQSXO'
+
         );
         $tableColumns['slider'] = array(
             'display_text' => 'Link Slider', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
         $tableColumns['titulo'] = array(
             'display_text' => 'Título', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
         $tableColumns['subtitulo'] = array(
             'display_text' => 'Sub-título', 
-            'perms' => 'EVCTAXQSHO'
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
         );
          
           
@@ -111,12 +115,20 @@ class CkEditor extends Common
             'display_text' => 'Descripción', 
             'perms' => 'EVCTAXQSHO', 
             'textarea' => array('rows' => 8, 'cols' => 25), 
-            'sub_str' => 30
+            'sub_str' => 30,
+            'req' => true
         );
+         
          $tableColumns['location'] = array(
-            'display_text' => 'Ubicación Imagen', 
-            'perms' => 'EVCTAXQSHO'
-        );
+            'display_text' => 'Ubicación', 
+            'perms' => 'EVCTAXQS',
+            'req' => true,
+            'select_array' => array('a' => 'Superior Izquierda', 
+                                    'b' => 'Superior Derecha',
+                                    'c' => 'Inferior Izquierda',
+                                    'd' => 'Inferior Derecha'), 
+                         'default' => 'a'
+        ); 
         $tableColumns['fecha'] = array(
             'display_text' => 'Fecha', 
             'req' => true, 

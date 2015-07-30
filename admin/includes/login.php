@@ -14,11 +14,11 @@ if(isset($_POST['email']))
     
     if($usuario == TRUE)
     {
-        header("Location: ../principal.php");
+        header("Location: /../principal.php");
     }
     if($usuario == FALSE)
     {
-    	header("Location: ../index.php?error");
+    	header("Location: /../index.php?error");
     }
 }
 ?>
