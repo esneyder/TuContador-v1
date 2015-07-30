@@ -1,7 +1,13 @@
-<?php session_start() ?>
-<?php if(isset($_SESSION['name']))
+<?php 
+session_start() ?>
+<?php
+ if(isset($_SESSION['name']))
 {
-}else{ header("Location: index.php");}?>
+}else{
+ header("Location: index.php");
+ }
+ ?>
+
 <?php require_once 'includes/functions.php'; ?>
 
 <!DOCTYPE html>
@@ -48,32 +54,32 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Start Bootstrap
+                        Aministración
                     </a>
                 </li>
                 <li>
-                    <a id="EditSliderPrincipal" href="#" >Slider Principal</a>
+                    <a id="EditSliderPrincipal" href="principal.php" >Slider Principal</a>
                 </li>
                 <li>
-                    <a id="blog">Shortcuts</a>
+                    <a id="blog">Blog</a>
                 </li>
                 <li>
-                    <a href="#">Overview</a>
+                    <a href="#">Usuarios</a>
                 </li>
                 <li>
-                    <a href="#">Events</a>
+                    <a href="#">Perfiles</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#">Empresa</a>
                 </li>
                 <li>
-                    <a href="#">Services</a>
+                    <a href="#">Catégorias</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">Contacto</a>
                 </li>
                 <li>
-                <a href="logout.php">Cerrar [<?php echo $_SESSION['name']; ?>]</a>
+                <a href="logout.php">Salir [<?php echo $_SESSION['name']; ?>]</a>
                 </li>
             </ul>
         </div>
@@ -83,9 +89,34 @@
         <div id="page-content-wrapper">
             <div class="container-fluid">
                 <div class="row">
+
+           <?php
+            if(isset($_GET['inserted']))
+            {
+                ?>
+                <div class="container">
+                <div class="alert alert-info">
+                <strong>Super!</strong> Post ingresado correctamente 
+                <a href="principal.php">Inicio</a>!
+                </div>
+                </div>
+                <?php
+            }
+            else if(isset($_GET['failure']))
+            {
+                ?>
+                <div class="container">
+                <div class="alert alert-warning">
+                <strong>SORRY!</strong> Ha ocurrido un error !
+                </div>
+                </div>
+                <?php
+            }
+            ?>
+
                     <div class="col-lg-12">    
-                        <h1>Usuarios Registrados</h1>   
-                        <table class="table table-striped">
+                        <h3>Usuarios Registrados</h3>   
+                        <table class="table table-striped table-hover">
                             <thead>
                               <tr>
                                 <th>
@@ -93,6 +124,9 @@
                                 </th>
                                 <th>
                                    Correo 
+                                </th>
+                                <th>
+                                   Permiso 
                                 </th>
                               </tr>
                             </thead>
@@ -105,12 +139,14 @@
                                 echo'<tr>
                                         <td>'.$key['nombre'].'</td>
                                         <td>'.$key['email'].'</td>
+                                        <td>'.$key['permiso'].'</td>
 
                                     </tr>';
                              }
                              ?>
                             </tbody>
                         </table>
+
                     </div>
                 </div>
             </div>

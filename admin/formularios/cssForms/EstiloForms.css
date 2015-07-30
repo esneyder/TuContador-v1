@@ -38,7 +38,7 @@
 }
 
 
-#ModalEditSlider{
+#ModalEditSlider, #ModalAddSlider{
     max-width: 900px;
     background-color: white;
     padding: 20px;

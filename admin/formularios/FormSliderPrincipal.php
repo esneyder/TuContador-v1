@@ -4,19 +4,27 @@
 	<meta charset="UTF-8">
 </head>
 <body>
-	<script>
-	</script>
+	 
+     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+       <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script scr="SliderPrincipal/js/form.js"></script>
+
 
 	<div id="ContForm">
 	<div class="input-group">
-		<button id="bot" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" placeholder="Agregar Slider">
+		<button id="bot" type="button" 
+		class="btn btn-primary dropdown-toggle" 
+		data-toggle="dropdown" aria-haspopup="true" 
+		placeholder="Agregar Slider">
 		    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
 		</button>
 		<button type="button" class="btn btn-primary dropdown-toggle"  aria-haspopup="true" placeholder="Actualizar Lista" style="margin-left: 10px;">
 		    <span class="glyphicon glyphicon-refresh" aria-hidden="true"></span>
 		</button>
 	</div>
-	<div class="modal fade" id="ModalEditSlider" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal fade" id="ModalEditSlider" 
+	tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 			<div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
 	          <h4 class="modal-title" id="myModalLabel">Editar Slider</h4>

@@ -10,14 +10,30 @@ class crud
 
 /*funCION CREar poST*/
 
-public function create($titulo,$intro,$texto,$categoria,$fecha ,$usuario)
+public function create($imagen,
+	                        $mini,$titulo,$intro,$texto,
+											$categoria,$fecha ,$usuario)
 	{
 		try
 		{
-			$stmt = $this->db->prepare("INSERT INTO noticias(titulo,intro,texto,
-													categoria ,fecha,usuario)
-			 										VALUES(:titulo, :intro, :texto,
-			 										:categoria,:fecha, :usuario )");
+			$stmt = $this->db->prepare("INSERT INTO noticias(imagen,
+															mini,
+															titulo,
+															intro,
+															texto,
+														    categoria
+													      ,fecha,
+													      usuario)
+			 										VALUES(imagen,
+			 											:mini,
+			 											:titulo, 
+			 											:intro,
+			 											 :texto,
+			 										:categoria,
+			 										:fecha, 
+			 										:usuario )");
+			$stmt->bindparam(":imagen",$imagen);
+			$stmt->bindparam(":mini",$mini);
 			$stmt->bindparam(":titulo",$titulo);
 			$stmt->bindparam(":intro",$intro);
 			$stmt->bindparam(":texto",$texto);
@@ -170,8 +186,7 @@ public function getPost()
 			while($row=$stmt->fetch(PDO::FETCH_ASSOC))
 			{
 				?>
-                <tr>
-                <td><?php print($row['id']); ?></td>
+                <tr> 
                 <td><?php print($row['titulo']); ?></td>
                 <td><?php print($row['intro']); ?></td>
                 <td><?php print($row['texto']); ?></td>

@@ -86,7 +86,8 @@ else if(isset($_GET['failure']))
             </div> 
 
              <div class="pure-controls">
-             <button type="submit" name="btn-save" id="btn-save" class="pure-button pure-button-primary">Guardar Post</button>
+             <button type="submit" name="btn-save" id="btn-save"
+              class="pure-button pure-button-primary">Guardar Post</button>
           <a href="index.php" class="btn btn-large btn-success"><i class="glyphicon glyphicon-backward"></i> &nbsp; Volver a index</a>
              
               </div>

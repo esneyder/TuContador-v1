@@ -46,27 +46,27 @@
 		 
 		<div class="span3">
 			<div class="met_gallery_wrap clearfix">
-				<a href="#"><img src="photos/gallery/thumbnails/7.jpg" alt=""></a>
+				<a href="#"><img src="photos/logos/Logo Nextcomm.png" alt=""></a>
 				<div class="met_gallery_overlay met_bgcolor6_trans">
-					<a href="photos/lightBoxImages/1.jpg" class="met_bgcolor met_bgcolor_transition2 met_color2" rel="lb_07"><i class="icon-picture"></i></a>
+					<a href="photos/logos/Logo Nextcomm.png" class="met_bgcolor met_bgcolor_transition2 met_color2" rel="lb_07"><i class="icon-picture"></i></a>
 				</div>
 
 				<div class="lightbox-images">
-					<a rel="lb_07" href="photos/lightBoxImages/2.jpg"></a>
-					<a rel="lb_07" href="photos/lightBoxImages/3.jpg"></a>
+					<a rel="lb_07" href="photos/logos/Logo Nextcomm.png"></a>
+					<a rel="lb_07" href="photos/logos/Logo Nextcomm.png"></a>
 				</div>
 			</div>
 		</div>
 		<div class="span3">
 			<div class="met_gallery_wrap clearfix">
-				<a href="#"><img src="photos/gallery/thumbnails/8.jpg" alt=""></a>
+				<a href="#"><img src="photos/logos/KONECTOOOO.jpg" alt=""></a>
 				<div class="met_gallery_overlay met_bgcolor6_trans">
-					<a href="photos/lightBoxImages/1.jpg" class="met_bgcolor met_bgcolor_transition2 met_color2" rel="lb_08"><i class="icon-picture"></i></a>
+					<a href="photos/logos/KONECTOOOO.jpg" class="met_bgcolor met_bgcolor_transition2 met_color2" rel="lb_08"><i class="icon-picture"></i></a>
 				</div>
 
 				<div class="lightbox-images">
-					<a rel="lb_08" href="photos/lightBoxImages/2.jpg"></a>
-					<a rel="lb_08" href="photos/lightBoxImages/3.jpg"></a>
+					<a rel="lb_08" href="photos/logos/KONECTOOOO.jpg"></a>
+					<a rel="lb_08" href="photos/logos/KONECTOOOO.jpg"></a>
 				</div>
 			</div>
 		</div>

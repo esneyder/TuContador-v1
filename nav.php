@@ -18,6 +18,7 @@
 					</li>
 				<li><a href="#">Hosting</a></li>
 				<li><a href="#">Diseño Web</a></li>
+				
 				 
 				 
 			</ul>
@@ -29,4 +30,5 @@
 		 <li class="met_bgcolor_transition2"><a href="#">Noticias</a></li>
 		<li class="met_bgcolor_transition2"><a href="contact.php">Perfiles</a></li>
 		<li class="met_bgcolor_transition2"><a href="contact.php">Contactenos</a></li>
+		<li class="met_bgcolor_transition2"><a href="Admin/">Administrar</a></li>
 	</ul>

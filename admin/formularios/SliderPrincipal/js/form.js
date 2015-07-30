@@ -1,9 +1,10 @@
 $(document).on('ready',principal);
 
 function principal() {
-		$('#bot').on('click',EditedSlider);
+		console.log('a');
+		$('#EditedSlider').on('click',EditedSlider);
 	}
 
 	function EditedSlider(){
-		alert('tes');
+		console.log('tes');
 	}

@@ -5,10 +5,10 @@
 				<h3 class="met_color2">PONERSE EN CONTACTO</h3>
 				<span class="met_color2">
 				
-					<p>nombre</p>
-					<p>corre</p>
-					<p>tele</p>
-					<p>ciudad</p>
+					<p>Acirsas S.A</p>
+					<p>info@acirsas.com</p>
+					<p>5811564-3116535619 </p>
+					<p>Medellín</p>
 				</span>
 				<div class="met_footer_social_icons">
 					<a class="met_color2 met_color_transition" target="_blank" href="https://www.facebook.com/pages/Tu-Contador/140399802639703?fref=ts"><i class="icon-facebook"></i></a>

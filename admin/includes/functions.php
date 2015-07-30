@@ -1,6 +1,6 @@
 <?php
 require_once 'conexion.class.php';
-// Funciones de Transportista (Imprime los transportistas de la base de datos )
+ 
 
 Function __UsuariosRegistrados(){
 $conexion = Conexion::singleton_conexion();
