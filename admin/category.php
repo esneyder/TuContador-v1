@@ -93,64 +93,27 @@ class CkEditor extends Common
             'display_text' => 'ID', 
             'perms' => 'TVQSXO'
         );
-        $tableColumns['imagen'] = array(
-            'display_text' => 'Link Imagen', 
+         $tableColumns['nombre'] = array(
+            'display_text' => 'Nombre', 
             'perms' => 'EVCTAXQSHO'
         );
-        $tableColumns['mini'] = array(
-            'display_text' => 'Preview', 
+         $tableColumns['estado'] = array(
+            'display_text' => 'Estado', 
             'perms' => 'EVCTAXQSHO'
         );
-        $tableColumns['titulo'] = array(
-            'display_text' => 'Título', 
-            'perms' => 'EVCTAXQSHO'
-        );
-        $tableColumns['intro'] = array(
-            'display_text' => 'Introducción', 
-            'perms' => 'EVCTAXQSHO'
-        );
-          
-         $tableColumns['texto'] = array(
-            'display_text' => 'Descripción', 
-            'perms' => 'EVCTAXQSHO', 
-            'textarea' => array('rows' => 8, 'cols' => 25), 
-            'sub_str' => 30
-        );
-          $tableColumns['id'] = array(
-            'display_text' => 'Categioria',
-             'perms' => 'EVCTAXQS',
-            'join' => array(
-                'table' => 'categorias', 
-                'column' => 'id', 
-                'display_mask' => " nombre", 
-                'type' => 'left',
-                'alias' => 'cat'
-            )   );
-        $tableColumns['fecha'] = array(
-            'display_text' => 'Fecha', 
-            'req' => true, 
-            'perms' => 'EVCTAXQSHO', 
-            'display_mask' => 'date_format(fecha,"%d %M %Y")', 
-            'order_mask' => 'date_format(fecha,"%Y %m %d")',
-            'calendar' => array(
-                'js_format' => 'dd MM yy', 
-                'options' => array('showButtonPanel' => true)
-            ),
-            'col_header_info' => 'style="width: 250px;"'
-        ); 
-        
-        $tableName = 'noticias';
+         
+        $tableName = 'categorias';
         $primaryCol = 'id';
         $errorFun = array(&$this,'logError');
         $permissions = 'EAVDQCSXHOI';
         
         $this->Editor = new AjaxTableEditor($tableName,$primaryCol,
-            $errorFun,$permissions,$tableColumns);
-        $this->Editor->setConfig('tableInfo','class="mateTable table table-striped table-hover"');
+        $errorFun,$permissions,$tableColumns);
+        $this->Editor->setConfig('tableInfo','  class="mateTable table table-striped table-hover"');
         $this->Editor->setConfig('orderByColumn','first_name');
-        $this->Editor->setConfig('tableTitle','Administración Blog');
-        $this->Editor->setConfig('addRowTitle','Nuevo Post');
-        $this->Editor->setConfig('editRowTitle','Editar Post');
+        $this->Editor->setConfig('tableTitle','Administración Catégoria');
+        $this->Editor->setConfig('addRowTitle','Nueva  Catégoria');
+        $this->Editor->setConfig('editRowTitle','Editar Catégoria');
         $this->Editor->setConfig('addScreenFun',array(&$this,'addCkEditor'));
         $this->Editor->setConfig('editScreenFun',array(&$this,'addCkEditor'));
         $this->Editor->setConfig('instanceName',$this->instanceName);

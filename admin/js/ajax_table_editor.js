@@ -711,7 +711,7 @@ var mate = (function(instanceName) {
 		
 		drawNewRowInPlace: function(html,drawAfterRowNum) {
 			if(drawAfterRowNum == null || drawAfterRowNum.length == 0) {
-				$($('#' + instanceName+'table_form table tr').get().reverse()).each(function(index,tRow) {
+				$($('#' + instanceName+'table_form  tr').get().reverse()).each(function(index,tRow) {
 					var rowId = $(tRow).attr('id');
 					if(rowId != instanceName+'filter_row' && rowId != instanceName+'add_in_place_row') {
 						$('#' + rowId).after(html);

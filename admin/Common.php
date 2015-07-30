@@ -37,11 +37,18 @@ class Common
 		"http://www.w3.org/TR/html4/loose.dtd">
 		<html>
 		<head>
-		<title>Mate Example</title>
+		<title>Acirsas - Admin</title>
+		<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link href="css/table_styles.css" rel="stylesheet" type="text/css" />
-		<link href="css/icon_styles.css" rel="stylesheet" type="text/css" />
-		
+	 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 	<link href="css/icon_styles.css" rel="stylesheet" type="text/css" />
+		<link rel="stylesheet" href="css/estilo.css">
+		  <link href="css/simple-sidebar.css" rel="stylesheet">
+  
 		<link href="js/jquery/css/redmond/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css" />
 		<script type="text/javascript" src="js/jquery/js/jquery-1.8.3.js"></script>
 		<script type="text/javascript" src="js/jquery/js/jquery-ui-1.9.2.custom.min.js"></script>
@@ -53,16 +60,33 @@ class Common
 
 		</head>	
 		<body>
+		
+		 <?php include 'menu.php'; ?>
+
 		<?php
 	}	
 	
+
+
 	protected function displayFooterHtml()
 	{
 		?>
-		<? if($this->showBackLink): ?>
-			<br /><br /><div align="center"><a href="index.php">Back To Examples</a></div><br /><br />
-		<? endif; ?>
+		 
+		</div>
 		</body>
+		<script>
+			$(document).on('ready',principal);
+
+		function principal() {
+		$('#menu-toggle').on('click',menu);
+		}
+
+		function menu()
+		{
+        $("#wrapper").toggleClass("toggled");
+		}
+
+		</script>
 		</html>
 		<?php
 	}	

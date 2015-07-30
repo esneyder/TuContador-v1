@@ -46,73 +46,10 @@ session_start() ?>
         <img src="../img/fav.png"/>
     </a>
 </left>
-
-    <div id="wrapper">
-
-        <!-- Sidebar -->
-        <div id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <li class="sidebar-brand">
-                    <a href="#">
-                        Aministración
-                    </a>
-                </li>
-                <li>
-                    <a id="EditSliderPrincipal" href="principal.php" >Slider Principal</a>
-                </li>
-                <li>
-                    <a id="blog">Blog</a>
-                </li>
-                <li>
-                    <a href="#">Usuarios</a>
-                </li>
-                <li>
-                    <a href="#">Perfiles</a>
-                </li>
-                <li>
-                    <a href="#">Empresa</a>
-                </li>
-                <li>
-                    <a href="#">Catégorias</a>
-                </li>
-                <li>
-                    <a href="#">Contacto</a>
-                </li>
-                <li>
-                <a href="logout.php">Salir [<?php echo $_SESSION['name']; ?>]</a>
-                </li>
-            </ul>
-        </div>
-        <!-- /#sidebar-wrapper -->
-
-        <!-- Page Content -->
-        <div id="page-content-wrapper">
+ <?php include 'menu.php'; ?>
             <div class="container-fluid">
                 <div class="row">
 
-           <?php
-            if(isset($_GET['inserted']))
-            {
-                ?>
-                <div class="container">
-                <div class="alert alert-info">
-                <strong>Super!</strong> Post ingresado correctamente 
-                <a href="principal.php">Inicio</a>!
-                </div>
-                </div>
-                <?php
-            }
-            else if(isset($_GET['failure']))
-            {
-                ?>
-                <div class="container">
-                <div class="alert alert-warning">
-                <strong>SORRY!</strong> Ha ocurrido un error !
-                </div>
-                </div>
-                <?php
-            }
-            ?>
 
                     <div class="col-lg-12">    
                         <h3>Usuarios Registrados</h3>   
@@ -161,8 +98,22 @@ session_start() ?>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/db.js"></script>
 
+<script>
+     $(document).on('ready',principal);
+
+        function principal() {
+            alert('a');
+        $('#menu-toggle').on('click',menu);
+        }
+
+        function menu()
+        {
+            alert('b');
+        $("#wrapper").toggleClass("toggled");
+        }
+
+        </script>
 
 
 </body>

@@ -85,8 +85,16 @@ table.mateTable td span.highlight {
 	background-color: #FFF547;
 }
 
-.addInPlaceBtnsDiv button, .mateSearchStringDiv button, .mateBtnsDiv button, .mateAdvancedSearchBtnsDiv button, .mateEditRowBtnsDiv button, .mateAddRowBtnsDiv button, .mateBtnsDiv select, .mateSearchBtnsDiv button, .mateSearchBtnsDiv select{
+.addInPlaceBtnsDiv button, .mateSearchStringDiv button,
+ .mateBtnsDiv button, .mateAdvancedSearchBtnsDiv button, 
+ .mateEditRowBtnsDiv button, .mateAddRowBtnsDiv button, 
+ .mateBtnsDiv select, .mateSearchBtnsDiv button, 
+
+ .mateSearchBtnsDiv select{
 	margin: 2px;
+	background: orange;
+	width: 60px;
+	border-radius: 5px;
 }
 
 .mateCriteriaDiv {

@@ -93,22 +93,19 @@ class CkEditor extends Common
             'display_text' => 'ID', 
             'perms' => 'TVQSXO'
         );
-        $tableColumns['imagen'] = array(
-            'display_text' => 'Link Imagen', 
-            'perms' => 'EVCTAXQSHO'
-        );
-        $tableColumns['mini'] = array(
-            'display_text' => 'Preview', 
+        $tableColumns['slider'] = array(
+            'display_text' => 'Link Slider', 
             'perms' => 'EVCTAXQSHO'
         );
         $tableColumns['titulo'] = array(
             'display_text' => 'Título', 
             'perms' => 'EVCTAXQSHO'
         );
-        $tableColumns['intro'] = array(
-            'display_text' => 'Introducción', 
+        $tableColumns['subtitulo'] = array(
+            'display_text' => 'Sub-título', 
             'perms' => 'EVCTAXQSHO'
         );
+         
           
          $tableColumns['texto'] = array(
             'display_text' => 'Descripción', 
@@ -116,16 +113,23 @@ class CkEditor extends Common
             'textarea' => array('rows' => 8, 'cols' => 25), 
             'sub_str' => 30
         );
-          $tableColumns['id'] = array(
-            'display_text' => 'Categioria',
-             'perms' => 'EVCTAXQS',
-            'join' => array(
-                'table' => 'categorias', 
-                'column' => 'id', 
-                'display_mask' => " nombre", 
-                'type' => 'left',
-                'alias' => 'cat'
-            )   );
+         $tableColumns['location'] = array(
+            'display_text' => 'Ubicación Imagen', 
+            'perms' => 'EVCTAXQSHO'
+        );
+        $tableColumns['fecha'] = array(
+            'display_text' => 'Fecha', 
+            'req' => true, 
+            'perms' => 'EVCTAXQSHO', 
+            'display_mask' => 'date_format(fecha,"%d %M %Y")', 
+            'order_mask' => 'date_format(fecha,"%Y %m %d")',
+            'calendar' => array(
+                'js_format' => 'dd MM yy', 
+                'options' => array('showButtonPanel' => true)
+            ),
+            'col_header_info' => 'style="width: 250px;"'
+        ); 
+         
         $tableColumns['fecha'] = array(
             'display_text' => 'Fecha', 
             'req' => true, 
@@ -139,7 +143,7 @@ class CkEditor extends Common
             'col_header_info' => 'style="width: 250px;"'
         ); 
         
-        $tableName = 'noticias';
+        $tableName = 'principal';
         $primaryCol = 'id';
         $errorFun = array(&$this,'logError');
         $permissions = 'EAVDQCSXHOI';
