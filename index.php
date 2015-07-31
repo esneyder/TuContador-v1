@@ -58,18 +58,23 @@
 						include_once 'module/PrincipalSlider/GetSliderPrincipal.php';
 						$fVSlider= new GetSliderPrincipal();
 						$listSlider= $fVSlider->GetSlider();
+
 						foreach ($listSlider as $key => $fila) {
 							echo '
 							<div data-slider-format="big-1-'.$fila['location'].'">
-							<img src="'.$fila['imagen'].'" />
+							<a href="noticias_detail.php?id='.$key.'">
+							<img src="'.$fila['imagen'].'"/>
+							</a>
 							<div class="'.$fila['ubicacion'].'">
 								<div class="met_thumbnail_slider_1_title met_bgcolor4">
 									'.$fila['titulo'].'
-									<a href="#" class="met_bgcolor met_color2 met_bgcolor_transition2"></a>
+									<a href="noticias_detail.php?id='.$key.'" class="met_bgcolor met_color2 met_bgcolor_transition2"></a>
 								</div>
 								<div class="met_thumbnail_slider_1_subtitle met_bgcolor5_trans">'.$fila['subtitulo'].'</div>
 							</div>
-						</div>';
+
+						</div>
+						';
 						}
 
 					 ?>	  
@@ -88,7 +93,7 @@
       <?php include_once 'connection/dbconfig.php'; ?>
 		<div class="met_recent_works clearfix">
 			                <?php   
-							 $query = "SELECT * FROM noticias ";
+							 $query = "SELECT * FROM noticias limit 6";
 						        $stmt =  $DB_con->prepare($query);
 						        $stmt->execute();    
 						        if($stmt->rowCount()>0)

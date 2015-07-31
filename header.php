@@ -10,7 +10,7 @@
 					<ul>
 						<li><a href="#" class="met_color_transition">Noticias</a></li>
 						<li><a href="#" class="met_color_transition">FAQ</a></li>
-						<li><a href="#" class="met_color_transition">Contacto</a></li>
+						<li><a href="admin/" class="met_color_transition">Admin</a></li>
 					</ul>
 				</nav>
 			</aside>
@@ -22,7 +22,7 @@
 						<a href="index.php">Inicio</a>
 					</li>
 					<li><a href="about.php">Nosotros</a></li>
-					 
+					 <!--
 					<li>
 						<a href="#">Portafolio</a>
 						<ul class="dl-submenu">
@@ -40,18 +40,18 @@
 							
 								</ul>
 							</li>
-							<li><a href="404.html">Hosting</a></li>
-							<li><a href="search_results.html">Search Results</a></li>
+							<li><a href="#">Hosting</a></li> 
+
 							 
 						</ul>
-					</li>
+					</li>-->
 					 
 					 
 					<li><a href="blog.php">Blog</a></li>
-					<li><a href="#">Clientes</a></li>
-					<li><a href="#">Noticias</a></li>
+					<li><a href="clients.php">Clientes</a></li>
+					<li><a href="noticias.php">Noticias</a></li>
 					<li><a href="#">Perfiles</a></li>
-					<li><a href="contact.html">Contatenos</a></li>
+					<li><a href="contact.php">Contatenos</a></li>
 				</ul>
 			</div><!-- /dl-menuwrapper -->
 

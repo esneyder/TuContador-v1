@@ -110,6 +110,11 @@ class CkEditor extends Common
             'perms' => 'EVCTAXQSHO',
             'req' => true
         );
+        $tableColumns['caracteristica4'] = array(
+            'display_text' => 'Dato 4', 
+            'perms' => 'EVCTAXQSHO',
+            'req' => true
+        );
         $tableColumns['cargo'] = array(
             'display_text' => 'Profesion', 
             'perms' => 'EVCTAXQSHO',
@@ -121,7 +126,7 @@ class CkEditor extends Common
             'req' => true
         );
          $tableColumns['descripcion'] = array(
-            'display_text' => 'DEscripción', 
+            'display_text' => 'Descripción', 
             'perms' => 'EVCTAXQSHO', 
             'textarea' => array('rows' => 8, 'cols' => 25), 
             'sub_str' => 30,

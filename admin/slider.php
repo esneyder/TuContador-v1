@@ -164,9 +164,9 @@ class CkEditor extends Common
             $errorFun,$permissions,$tableColumns);
         $this->Editor->setConfig('tableInfo','class="mateTable table table-striped table-hover"');
         $this->Editor->setConfig('orderByColumn','first_name');
-        $this->Editor->setConfig('tableTitle','Administración Blog');
-        $this->Editor->setConfig('addRowTitle','Nuevo Post');
-        $this->Editor->setConfig('editRowTitle','Editar Post');
+        $this->Editor->setConfig('tableTitle','Administración Noticias');
+        $this->Editor->setConfig('addRowTitle','Nueva Noticia');
+        $this->Editor->setConfig('editRowTitle','Editar Noticia');
         $this->Editor->setConfig('addScreenFun',array(&$this,'addCkEditor'));
         $this->Editor->setConfig('editScreenFun',array(&$this,'addCkEditor'));
         $this->Editor->setConfig('instanceName',$this->instanceName);

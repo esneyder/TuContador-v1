@@ -12,7 +12,7 @@
             <ul class="sidebar-nav">
                 <li class="sidebar-brand">
                     <a href="#">
-                        Aministración
+                        Administración
 
                     </a>
                 </li>
@@ -36,7 +36,7 @@
                     <a href="category.php">Catagorías</a>
                 </li>
                 <li>
-                    <a href="../contact.php">Contacto</a>
+                    <a href="users.php">Usuarios</a>
                 </li>
                 <li>
                 <a href="logout.php">Salir [<?php echo $_SESSION['name']; ?>]</a>

@@ -37,7 +37,9 @@ class GeTSliderPrincipal
 									$ubicacion="met_thumbnail_slider_1_effects met_thumbnail_slider_1_effects_left met_thumbnail_slider_1_top";
 									break;
 							}
-			 	$arrayName[$row['id']] = array(	'imagen' => $row['slider'], 
+			 	$arrayName[$row['id']] = array(	
+			 							
+			 							'imagen' => $row['slider'], 
 			 							'titulo' => $row['titulo'], 
 			 							'subtitulo' => $row['subtitulo'],
 			 							'location' => $row['location'],

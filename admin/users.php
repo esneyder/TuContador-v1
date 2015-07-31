@@ -93,13 +93,13 @@ class CkEditor extends Common
             'display_text' => 'ID', 
             'perms' => 'TVQSXO'
         );
-        $tableColumns['imagen'] = array(
-            'display_text' => 'Link Imagen', 
+        $tableColumns['nombre'] = array(
+            'display_text' => 'Nombre Usuario', 
             'perms' => 'EVCTAXQSHO',
             'req' => true
         );
-        $tableColumns['mini'] = array(
-            'display_text' => 'Preview', 
+        $tableColumns['email'] = array(
+            'display_text' => 'Correo', 
             'perms' => 'EVCTAXQSHO',
             'req' => true
         );
@@ -154,8 +154,8 @@ class CkEditor extends Common
             $errorFun,$permissions,$tableColumns);
         $this->Editor->setConfig('tableInfo','class=" table table-striped table-hover"');
         $this->Editor->setConfig('orderByColumn','first_name');
-        $this->Editor->setConfig('tableTitle','Administración  blog');
-        $this->Editor->setConfig('addRowTitle','Nuevo post');
+        $this->Editor->setConfig('tableTitle','Administración Blog');
+        $this->Editor->setConfig('addRowTitle','Nuevo Post');
         $this->Editor->setConfig('editRowTitle','Editar Post');
         $this->Editor->setConfig('addScreenFun',array(&$this,'addCkEditor'));
         $this->Editor->setConfig('editScreenFun',array(&$this,'addCkEditor'));
